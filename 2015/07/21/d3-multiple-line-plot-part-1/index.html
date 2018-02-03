@@ -185,21 +185,64 @@ var bisectDate = d3.bisector(function(d) {
 
 	
 </article><!-- #post-## -->
-
-<div id="comments" class="comments-area">
-
-		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2015/07/21/d3-multiple-line-plot-part-1/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://lpplmarketwatch.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
-				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
-<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
-<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
-<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='627' id='comment_post_ID' />
-<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-</p>			</form>
-			</div><!-- #respond -->
 	
-</div><!-- #comments -->
+	<!-- Here we load disqus comments -->
+	<div class="dcl-disqus-thread" id="comments" >
+	<div id="disqus_thread">
+		</div>
+	</div>
+	
+		
+			<script type="text/javascript">
+	/* <![CDATA[ */
+		var disqus_url = 'https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/';
+		var disqus_identifier = '627 https://lpplmarketwatch.com/?p=627';
+		var disqus_container_id = 'disqus_thread';
+		var disqus_domain = 'disqus.com';
+		var disqus_shortname = 'lpplmarketwatch';
+		var disqus_title = "D3.js Multiple Line Plot &#8211; Part 1";
+		var disqus_config = function () {
+			var config = this; // Access to the config object
+			config.language = '';
 
+			/* Add the ability to add javascript callbacks */
+			
+			/*
+			   All currently supported events:
+				* preData — fires just before we request for initial data
+				* preInit - fires after we get initial data but before we load any dependencies
+				* onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+				* afterRender - fires when template is rendered but before we show it
+				* onReady - everything is done
+			 */
+
+			config.callbacks.preData.push(function() {
+				// clear out the container (its filled for SEO/legacy purposes)
+				document.getElementById(disqus_container_id).innerHTML = '';
+			});
+						config.callbacks.onReady.push(function() {
+				// sync comments in the background so we don't block the page
+				var script = document.createElement('script');
+				script.async = true;
+				script.src = '?cf_action=sync_comments&post_id=627';
+
+				var firstScript = document.getElementsByTagName( "script" )[0];
+				firstScript.parentNode.insertBefore(script, firstScript);
+			});
+								};
+	/* ]]> */
+	</script>
+	
+		
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		var DsqLocal = {
+			'trackbacks': [
+				],
+			'trackback_url': "https:\/\/lpplmarketwatch.com\/2015\/07\/21\/d3-multiple-line-plot-part-1\/trackback\/"		};
+	/* ]]> */
+	</script>
+			
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Post navigation</h2>
 		<div class="nav-links"><div class="nav-previous"><a href="https://lpplmarketwatch.com/2015/07/08/mainland-china-bubble/" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">Shenzhen and Shanghai Market Bubble</span></a></div><div class="nav-next"><a href="https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/" rel="next"><span class="post-title">D3.js Multiple Line Plot &#8211; Part 2 <i class="fa fa-chevron-right"></i></span></a></div></div>
@@ -293,6 +336,54 @@ var bisectDate = d3.bisector(function(d) {
 		<script type='text/javascript' src='https://lpplmarketwatch.com/wp-content/themes/sparkling/assets/js/skip-link-focus-fix.min.js?ver=20140222'></script>
 <script type='text/javascript' src='https://lpplmarketwatch.com/wp-includes/js/comment-reply.min.js'></script>
 <script type='text/javascript' src='https://lpplmarketwatch.com/wp-includes/js/wp-embed.min.js'></script>
+<script  type="text/javascript">
 
+    var disqus_shortname = "lpplmarketwatch";
+    if (typeof ds_loaded == "undefined") {
+        var ds_loaded = false;
+    }
+    function loadDisqus() {
+        var disqus_div = document.getElementById("disqus_thread");
+        var top = disqus_div.offsetTop;
+        var disqus_data = disqus_div.dataset;
+        if ( !ds_loaded && ( window.scrollY || window.pageYOffset ) + window.innerHeight > top ) {
+            ds_loaded = true;
+            for (var key in disqus_data) {
+                if (key.substr(0,6) == "disqus") {
+                    window["disqus_" + key.replace("disqus","").toLowerCase()] = disqus_data[key];
+								}
+                }
+                var dsq = document.createElement("script");
+                dsq.type = "text/javascript";
+                dsq.async = true;
+                dsq.src = "https://" + window.disqus_shortname + ".disqus.com/embed.js";
+                if(document.getElementById("dcl-hidden-div")) {
+                    document.getElementById("dcl-hidden-div").innerHTML = "Loading...";
+                }
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            }
+        }
+					var disqus_div_new = document.getElementById("disqus_thread");
+		var divExists = disqus_div_new != null;
+                if(document.body.scrollHeight < window.innerHeight){
+                    loadDisqus();
+                } else if(divExists) {
+                    window.onscroll = function() { loadDisqus(); }
+                }
+	</script><script   type='text/javascript'>
+                /* <![CDATA[ */
+                var hash = window.location.hash;
+                var disqus_shortname = 'lpplmarketwatch';
+                if(hash!==''){
+                    var ds_loaded = true;
+                    var dcl_loaded = 1;
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = 'https://' + disqus_shortname + '.' + 'disqus.com' + '/' + 'embed' + '.js' + '?pname=wordpress&pver=2.84';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();}
+                /* ]]> */
+            </script>
 </body>
 </html>
