@@ -2,7 +2,7 @@ find . -type f -exec sed -i 's/?ver=4.9.2//g' {} +
 find . -type f -exec sed -i 's/lppl-thebubbleindex.rhcloud.com/lpplmarketwatch.com/g' {} +
 find . -type f -exec sed -i 's#http://lpplmarketwatch.github.io#https://lpplmarketwatch.com#g' {} +
 find . -type f -exec sed -i 's#https://lpplmarketwatch.github.io#https://lpplmarketwatch.com#g' {} +
-find . -type f -exec sed -i 's#http://lpplmarketwatch.com#https://lpplmarketwatch.com#g' {} +
+find . -type f -exec sed -i 's#https://lpplmarketwatch.com#https://lpplmarketwatch.com#g' {} +
 find . -type f -exec sed -i 's#http://localhost/#https://lpplmarketwatch.com/#g' {} +
 find . -type f -exec sed -i "s#dsq.src = '//'#dsq.src = 'https://'#g" {} +
 find . -type f -exec sed -i 's#dsq.src = "http://" + window.disqus_shortname + ".disqus.com/embed.js";#dsq.src = "https://" + window.disqus_shortname + ".disqus.com/embed.js";#g' {} +
