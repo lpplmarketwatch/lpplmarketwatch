@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>website &#8211; LPPL Market Watch</title>
+	<atom:link href="https://lpplmarketwatch.com/category/website/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost</link>
+	<description>Blog of The Bubble Index</description>
+	<lastBuildDate>Sat, 03 Feb 2018 02:12:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.2</generator>
+	<item>
+		<title>Three.js 3D Contour Plot &#8211; Part 1</title>
+		<link>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/#respond</comments>
+		<pubDate>Fri, 31 Jul 2015 01:38:37 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[three.js]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=696</guid>
+		<description><![CDATA[Three.js is a powerful tool for visualizing a wide variety of objects including mathematical data. The JavaScript based API greatly simplifies the creation and manipulation of WebGL graphic objects. This post is the first in a series which describe the creation of The Bubble Index 3D Contours. The first step is to check if the [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Three.js is a powerful tool for visualizing a wide variety of objects including mathematical data. The JavaScript based API greatly simplifies the creation and manipulation of WebGL graphic objects. This post is the first in a series which describe the creation of <a href="https://lpplmarketwatch.com/3d-contour-examples/" target="_blank">The Bubble Index 3D Contours</a>. The first step is to check if the user&#8217;s device supports WebGL. The <code>Detector</code> variable comes from <a href="http://alteredqualia.com/" target="_blank">AlteredQualia</a> and <a href="http://mrdoob.com/" target="_blank">Mr.Doob</a>. If the device supports WebGL, it is time to initialize variables:</p>
+<pre><code>if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+var renderer; 
+var texture; 
+var scene;     
+var camera;   
+var controls;
+var axes;
+var model; 
+var container;
+var rotateX = 0;   
+var rotateY = 0;
+
+init();</code></pre>
+<p>The first important code is called by the <code>init()</code> function. This code creates the director&#8217;s camera; the user is like a film director. The camera is the amount, perspective, and angle of the 3D scene displayed on the screen. The camera is controlled by a control object which allows the user to interact via the keyboard and mouse. To display anything, a scene needs to be created. Objects need to be added to the scene in order for them to become visible. The renderer does all the work to actually turn the code objects, numbers, and interactions into colors and shapes displayed on the screen via the device&#8217;s graphics card and WebGL.</p>
+<p>In order to draw a 3D contour, a set of geometric data needs to be created. The data defines vertices and faces of polygons which tell Three.js how to draw a shape. The Bubble Index 3D Contour displays parallel time-series by first turning them into a set of X,Y,Z coordinates. It then sends these coordinates to <a href="http://3dfmaps.com/index.htm" target="_blank">3DFieldPro</a> which outputs a dxf AutoCAD file. The dxf file is then converted into a Three.js JSON 3D data structure via the <a href="http://www.johannes-raida.de/jnetcad.htm" target="_blank">JNetCAD</a> program. Thus, with the JSON data created, the <code>THREE.JSONLoader()</code> provides a convenient way to load and display the 3D contour data.</p>
+<p>In future posts, the <code>addAxesAndText()</code> and <code>addTimeSeries()</code> functions will be discussed. They simply add the axes and the price data time-series to the display.</p>
+<p>Finally, the renderer needs to be added to the HTML DOM. A window listener function is created to provide a means to redraw the display in the case of a resize of the browser.</p>
+<pre><code>function init() {
+    camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 35;
+    camera.up.set( 0, 0, 1 );
+    controls = new THREE.OrbitControls( camera );
+    controls.damping = 0.5;
+    controls.addEventListener( 'change', render );
+    scene = new THREE.Scene();
+    renderer = new THREE.WebGLRenderer( {  antialias: true   } );
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setClearColor(0);
+    var loader = new THREE.JSONLoader();
+    loader.load('AA.BA.json', modelLoadedCallback);
+
+    addAxesAndText();
+    addTimeSeries();
+
+    container = document.getElementById( 'container' );
+    container.appendChild( renderer.domElement );
+    window.addEventListener( 'resize', onWindowResize, false );
+    animate();
+ }</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>D3.js Multiple Line Plot &#8211; Part 6</title>
+		<link>https://lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/#respond</comments>
+		<pubDate>Thu, 30 Jul 2015 02:32:54 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[d3]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=690</guid>
+		<description><![CDATA[Working version of the plot, download here. This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For instance, assume the &#8220;52 Days&#8221; and &#8220;104 Days&#8221; time-series are currently displayed and the y-range is: [0 &#8211; 123]. Now, the &#8220;2520 Days&#8221; time-series is added by a mouse click. This time series has y-values in the range [420 &#8211; 540]. Thus, the new range [0 &#8211; 540] needs to be established as the new y-axis. However, all the time-series displayed &#8220;pre-click&#8221; (52 and 104 Days) will need to be removed and re-drawn since their paths are scaled based on the [0 &#8211; 123] range of y-values. As seen in <a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-4/" target="_blank">part 4</a>, if the legend button is black with a strike-through, the <code>addWindow()</code> function is called:</p>
+<pre><code>function addWindow(name, addAllBoolean, updateBoolean, longTransition) {
+    var transition = longTransition ? 500 : 0;
+    if (svg.selectAll(".index").empty() || !svg.selectAll(".index").classed("a" + name) || updateBoolean) {
+        var idName = name.toString();
+        var tempIndex = svg.selectAll(".aaa")
+            .data(indices.filter(function(d) {
+                return d.name == idName;
+            }))
+            .enter().append("g")
+            .attr("id", function(d) {
+                return "index" + d.name;
+            })
+            .attr("class", function(d) {
+                return "index a" + d.name;
+            });
+        if (!addAllBoolean) {
+            var displayedIndices = d3.selectAll(".index").data();
+            y.domain([
+                d3.min(displayedIndices, function(c) {
+                    return d3.min(c.values, function(v) {
+                        return v.yvalue;
+                    });
+                }),
+                d3.max(displayedIndices, function(c) {
+                    return d3.max(c.values, function(v) {
+                        return v.yvalue;
+                    });
+                })
+            ]);
+            svg.select(".y.axis")
+                .call(yAxis);
+            d3.selectAll(".index").data().forEach(function(d) {
+                removeWindow(d.name, false, false);
+                (d.name == name) ? addWindow(d.name, true, true, true): addWindow(d.name, true, true, false);
+
+            });
+        }
+        tempIndex.append("path")
+            .attr("class", "line")
+            .attr("d", function(d) {
+                return line(d.values);
+            })
+            .style("opacity", 0.0)
+            .style("stroke", function(d) {
+                return color(d.name);
+            })
+            .transition()
+            .style("opacity", 1.0)
+            .duration(transition);
+    }
+}
+</code></pre>
+<p>As can be seen by the <code>addWindow()</code> function, in order to add a window, all previous windows need to be removed. If the window is currently displayed, it can be removed with a mouse click. There are two types of <code>addWindow()</code> and <code>removeWindow()</code> function calls. The logic is based on various boolean values. This is needed because of the &#8220;Add All&#8221; and &#8220;Remove All&#8221; buttons. These buttons require a different logic than the case of a single time-series being added or removed. Presented below is the <code>removeWindow()</code> function:</p>
+<pre><code>function removeWindow(name, longTransitionBoolean, firstClick) {
+    var transition = longTransitionBoolean ? 500 : 0;
+    var idName = "#index" + name.toString();
+    d3.select(idName)
+        .transition()
+        .style("opacity", 0.0)
+        .duration(transition)
+        .remove().each("end", function() {
+            if (firstClick) {
+                var displayedIndices = d3.selectAll(".index").data();
+                if (!d3.selectAll(".index").empty()) {
+                    y.domain([
+                        d3.min(displayedIndices, function(c) {
+                            return d3.min(c.values, function(v) {
+                                return v.yvalue;
+                            });
+                        }),
+                        d3.max(displayedIndices, function(c) {
+                            return d3.max(c.values, function(v) {
+                                return v.yvalue;
+                            });
+                        })
+                    ]);
+                    svg.select(".y.axis")
+                        .call(yAxis);
+                    d3.selectAll(".index").data().forEach(function(d) {
+                        removeWindow(d.name, false, false);
+                        addWindow(d.name, true, true, false);
+
+                    });
+                    addMouse();
+                }
+            }
+        });</code></pre>
+<p>In each of these functions, the D3 transition function is called in order to make the addition and remove of the time-series lines smooth.<br />
+This concludes the posts concerning drawing multiple line plots with mouse interaction in D3.js. Hope this helps!</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>D3.js Multiple Line Plot &#8211; Part 5</title>
+		<link>https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/#respond</comments>
+		<pubDate>Wed, 29 Jul 2015 01:23:44 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[d3]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=678</guid>
+		<description><![CDATA[Working version of the plot, download here. The D3 function, d3.mouse(), provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The mousemove() function was initialized in part 1 as [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>The D3 function, <code>d3.mouse()</code>, provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The <code>mousemove()</code> function was initialized in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a> as follows:</p>
+<pre><code>function mousemove() {
+    var x0 = x.invert(d3.mouse(d3.select("#svgMain").node())[0]);
+    var i = bisectDate(origData, x0, 1);
+    d3.selectAll(".index").data().forEach(function(d) {
+        var d0 = d.values[i - 1],
+            d1 = d.values[i],
+            p = x0 - d0.date &gt; d1.date - x0 ? d1 : d0;
+        var x_new = x(p.date),
+            y_new = y(p.yvalue);
+        svg.select("#focus" + d.name).attr("transform", "translate(" + x_new + "," + y_new + ")");
+        svg.select("#numtext" + d.name).text(p.yvalue);
+				svg.select("#datetext").text(dateDisplayFormat(p.date));
+    });
+}
+</code></pre>
+<p>The code in <a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-4/" target="_blank">part 4</a> displayed where the mousemove() function is first called.</p>
+<p>Next, add html and svg elements which draw circles and append text to the plot display at the location and value of the data points. These objects will follow the movement of the mouse. The location of the nearest Date will be fixed in the top center of the plot; its value will change accordingly as the mouse moves. Each time-series line currently displayed on the plot will need to have a &#8220;rect&#8221; appended to it, as shown below:</p>
+<pre><code>var addMouse = function() {
+    focus = svg.selectAll(".index").append("g")
+        .attr("id", function(d) {
+            return "focus" + d.name;
+        })
+        .attr("class", function(d) {
+            return "focus " + d.name;
+        })
+        .style("display", "none");
+    focus.append("circle")
+        .attr("id", function(d) {
+            return "circle" + d.name;
+        })
+        .attr("r", 4.5);
+    focus.append("text")
+        .attr("id", function(d) {
+            return "numtext" + d.name;
+        })
+        .attr("x", 9)
+        .attr("dy", "-0.5em");
+    svg.append("text")
+        .attr("id", "datetext")
+        .attr("x", width / 2);
+    svg.selectAll(".index").append("rect")
+        .attr("class", function(d) {
+            return "overlay " + d.name;
+        })
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", function() {
+            focus.style("display", null);
+        })
+        .on("mouseout", function() {
+            focus.style("display", "none");
+        })
+        .on("mousemove", mousemove);
+}
+</code></pre>
+<p>The circles that trace the multiple plot lines will appear and disappear as the mouse moves onto and off the plot. This is associated with the following CSS style code:</p>
+<pre><code>.overlay {
+  fill: none;
+  pointer-events: all;
+}
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>D3.js Multiple Line Plot &#8211; Part 4</title>
+		<link>https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/#respond</comments>
+		<pubDate>Tue, 28 Jul 2015 00:47:31 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[d3]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=661</guid>
+		<description><![CDATA[Working version of the plot, download here. This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, the plot display must not fill the entire height of the svg object. As seen in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a>, the plot has a bottom margin of size 100 and a top margin of size 20. This allows space for a legend to span the area below the plot.</p>
+<pre><code>var maxPerRow = Math.ceil(indices.length / 2);
+var legendSpace = width / maxPerRow;</code></pre>
+<p>The code assumes that two rows will be enough to display all the time-series labels, including an &#8220;Add All&#8221; and &#8220;Remove All&#8221; button.</p>
+<p>The &#8220;Add All&#8221; feature will add every time-series contained in the original data to the plot. It is like a plot &#8220;reset.&#8221; Whatever is currently displayed will be removed. Thus, the y-axis will need to be re-scaled to fit the original range of data.</p>
+<pre><code>svg.append("text")
+    .attr("x", 0)
+    .attr("y", height + (margin.bottom / 2) + 15)
+    .attr("class", "legend addAll")
+    .style("fill", "red")
+    .text("Add All")
+    .on("click", function() {
+        d3.selectAll(".index").data().forEach(function(d) {
+            removeWindow(d.name, false, false);
+        });
+        y.domain([
+            d3.min(indices, function(c) {
+                return d3.min(c.values, function(v) {
+                    return v.yvalue;
+                });
+            }),
+            d3.max(indices, function(c) {
+                return d3.max(c.values, function(v) {
+                    return v.yvalue;
+                });
+            })
+        ]);
+        svg.select(".y.axis")
+            .call(yAxis);
+        indices.forEach(function(d, i) {
+            var myID = "legend" + d.name;
+            var selection = d3.select("#" + myID);
+            if (selection.attr("class") == "legend-clicked") {
+                selection.style("fill", color(d.name)).attr("class", "legend " + d.name);
+                addWindow(d.name, true, false, true);
+            }
+        });
+        addMouse();
+    });</code></pre>
+<p>The &#8220;Remove All&#8221; feature will remove all time-series currently displayed in the plot. Note: while writing this, I noticed it may not be necessary to re-scale the y-axis.</p>
+<pre><code>svg.append("text")
+    .attr("x", 0)
+    .attr("y", height + (margin.bottom / 2) + 45)
+    .attr("class", "legend removeAll")
+    .style("fill", "red")
+    .text("Remove All")
+    .on("click", function() {
+        indices.forEach(function(d, i) {
+            var myID = "legend" + d.name;
+            var selection = d3.select("#" + myID);
+            selection.style("fill", "black").attr("class", "legend-clicked");
+            removeWindow(d.name, true, false);
+        });
+        var displayedIndices = d3.selectAll(".index").data();
+        y.domain([
+            d3.min(displayedIndices, function(c) {
+                return d3.min(c.values, function(v) {
+                    return v.yvalue;
+                });
+            }),
+            d3.max(displayedIndices, function(c) {
+                return d3.max(c.values, function(v) {
+                    return v.yvalue;
+                });
+            })
+        ]);
+        svg.select(".y.axis")
+            .call(yAxis);
+    });
+</code></pre>
+<p>At this point in the code, the function which creates a mouse-over interaction is called. The mouse-over function will be discussed in a later post.</p>
+<pre><code>addMouse();
+</code></pre>
+<p>Next, a legend entry for each time-series is appended to the bottom of the svg plot. Note: In the HTML header, there is a CSS style sheet which contains a class for a legend element which has been clicked-on.</p>
+<pre><code>.legend {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+    cursor:pointer;
+} 
+
+.legend-clicked {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+    text-decoration: line-through;
+    cursor:pointer;
+}</code></pre>
+<p>When the user clicks on a time-series label, that particular time-series will either be removed or added, depending on the current status of that time-series. For instance, if the &#8220;52 Day&#8221; label is black and has a strike-through style, it means the time-series has been removed from the plot. Clicking on this label will add the time-series back to the plot. However, in order for this to happen, the y-axis needs to be re-scaled and all the currently displayed lines will need to be re-drawn. The functions which re-scale and update the plot will be included in a future post.</p>
+<pre><code>indices.forEach(function(d, i) {
+    svg.append("text")
+        .attr("x", legendSpace + (i % maxPerRow) * legendSpace)
+        .attr("y", (i &amp; lt; maxPerRow) ? (height + (margin.bottom / 2) + 15) : (height + (margin.bottom / 2) + 45))
+        .attr("class", "legend " + d.name)
+        .attr("id", "legend" + d.name)
+        .style("fill", color(d.name))
+        .text(d.name + " Days")
+        .on("click", function() {
+            var selection = d3.select(this);
+            if (selection.attr("class") == "legend-clicked") {
+                selection.style("fill", color(d.name)).attr("class", "legend " + d.name);
+                addWindow(d.name, false, false, true);
+                addMouse();
+            } else {
+                selection.style("fill", "black").attr("class", "legend-clicked");
+                removeWindow(d.name, true, true);
+            }
+        });
+});
+</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>D3.js Multiple Line Plot &#8211; Part 3</title>
+		<link>https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/#respond</comments>
+		<pubDate>Fri, 24 Jul 2015 00:53:57 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[d3]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=650</guid>
+		<description><![CDATA[Working version of the plot, download here. The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes. Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes.</p>
+<p>Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; However, note that the y-axis has been scaled (<a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-2/" target="_blank">part 2</a>) based on all the time-series. If a single time-series is removed, the y-axis should be re-scaled and re-drawn. The entire plot will also have to be re-drawn. Removing and added lines will be the subject of later posts.</p>
+<pre><code>    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(" + width + " ,0)")
+        .call(yAxis)
+        .append("text")
+        .attr("y", 6)
+        .attr("dy", "-.71em")
+        .style("text-anchor", "end")
+        .text("Relative Power");
+</code></pre>
+<p>Now the initial lines can be drawn on the plot. Since the initial state of the <code>svg</code> selection contains no child elements having the &#8220;.index&#8221; keyword, the D3 selection: <code>svg.selectAll(".index")</code> will return with an empty selection. Thus, the combination of the <code>.data(indices)</code> and <code>.enter().append("g")</code> D3 functions will append a &#8220;g&#8221; element for every map key in the <code>index</code> object. Each &#8220;g&#8221; element will have an &#8220;id&#8221; and &#8220;class&#8221; based on the individual time-series &#8220;name&#8221; attribute.</p>
+<p>For each time-series object attached to the <code>index</code> selection, the <code>.append("path")</code> function will create a &#8220;path&#8221; element. This path will be drawn based on the <code>values</code> entry of the individual time-series map. The <code>function(d)</code> in the D3 callback of <code>.attr()</code> implicitly iterates over all key-pairs in the <code>index</code> selection and all key-pair in each time-series. The <code>line</code> and <code>color</code> functions were initialized in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a>.</p>
+<pre><code>    index = svg.selectAll(".index")
+        .data(indices)
+        .enter().append("g")
+        .attr("id", function(d) {
+            return "index" + d.name;
+        })
+        .attr("class", function(d) {
+            return "index a" + d.name;
+        });
+
+    index.append("path")
+        .attr("class", "line")
+        .attr("d", function(d) {
+            return line(d.values);
+        })
+        .style("stroke", function(d) {
+            return color(d.name);
+        });
+</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>D3.js Multiple Line Plot &#8211; Part 2</title>
+		<link>https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/#respond</comments>
+		<pubDate>Wed, 22 Jul 2015 01:01:29 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[d3]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=640</guid>
+		<description><![CDATA[Working version of the plot, download here. As mentioned before, the following code is presented &#8220;as it is&#8221; in its current version. Some functions and variables are presented out of order. The SVG variable is created by a D3 selection. The &#8220;plotarea&#8221; &#60;div&#62; is selected as the element where the SVG plot will be created. [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>As mentioned before, the following code is presented &#8220;as it is&#8221; in its current version. Some functions and variables are presented out of order.</p>
+<p>The SVG variable is created by a D3 selection. The &#8220;plotarea&#8221; &lt;div&gt; is selected as the element where the SVG plot will be created. A &#8220;g&#8221; element is appended to the plot. This will allow the time-series to be grouped together as a single object.</p>
+<pre><code>var svg = d3.select("#plotarea").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("id", "svgMain");
+</code></pre>
+<p>The source data is of course the most important piece in the puzzle. In order to create an SVG plot containing multiple lines which each share the same set of dates, make sure that the data is formatted and aligned correctly. For instance, create a tab-separated file which contains a header entry for each column. And make sure each row contains an entry for each column. Thus, if no data is available for a specific date and column, place a value of 0, ensuring no gaps in the data. However, depending on the structure of the data, this may not work for all applications.</p>
+<p>An example header for the tsv file: &#8220;date 52 Days 104 Days 153 Days 256 Days 512 Days&#8221;, where each &#8220;# Days&#8221; entry is separated by a tab.</p>
+<p>Example:</p>
+<pre><code>date    52 Days    104 Days
+2015-05-01    52.0    102.0
+2015-05-02    54.0    104.0
+</code></pre>
+<p>D3 has a function called &#8220;d3.tsv&#8221; which easily requests and loads a tab-separated file into the browser memory.</p>
+<p>Once this raw data has been loaded, the &#8220;d3.tsv&#8221; function enters a callback. This is where the data is parsed, turned into SVG objects, and loaded into a DOM element.</p>
+<p>Since there are multiple time-series, there will be a separate map for each column. The &#8220;indices&#8221; variable contains the separate time-series as a key-value pair mapping in memory. Each column header (i.e. 52 Days) is the key for a time-series. The value entry of the &#8220;indices&#8221; map is itself another map object. This additional map object will have a set of key-value pairs between dates and numerical values. Thus, if there are 5 column headers (excluding the date column) then the &#8220;indices&#8221; object will have 5 keys. And, if there are 252 date rows, each map associated with each one of the 5 keys will have 252 date keys.</p>
+<p>Once the data is stored as a map, the D3 &#8220;domain&#8221; functions &#8212; in combination with the D3 max and min functions &#8212; will determine the numerical and time-line ranges of ALL the time-series data.</p>
+<pre><code>d3.tsv("data-location_name.tsv", function(error, data) {
+    color.domain(d3.keys(data[0]).filter(function(key) {
+        return key !== "date";
+    }));
+
+    data.forEach(function(d) {
+        d.date = parseDate(d.date);
+    });
+
+    indices = color.domain().map(function(name) {
+        return {
+            name: name.substring(0, name.indexOf(" Days")),
+            values: data.map(function(d) {
+                return {
+                    date: d.date,
+                    yvalue: +d[name]
+                };
+            })
+        };
+    });
+    origData = data;
+    x.domain(d3.extent(data, function(d) {
+        return d.date;
+    }));
+
+    y.domain([
+        d3.min(indices, function(c) {
+            return d3.min(c.values, function(v) {
+                return v.yvalue;
+            });
+        }),
+        d3.max(indices, function(c) {
+            return d3.max(c.values, function(v) {
+                return v.yvalue;
+            });
+        })
+    ]);
+</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>D3.js Multiple Line Plot &#8211; Part 1</title>
+		<link>https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/</link>
+		<comments>https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/#respond</comments>
+		<pubDate>Tue, 21 Jul 2015 01:46:08 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[d3]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=627</guid>
+		<description><![CDATA[To help any one interested in creating &#8220;multi-line&#8221; or multiple line charts with D3.js, I will walk through the various steps required to create the D3 plots on The Bubble Index. There may be many places in my code which could be simplified and improved &#8212; I present the current version &#8220;as it is.&#8221; Working [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>To help any one interested in creating &#8220;multi-line&#8221; or multiple line charts with D3.js, I will walk through the various steps required to create the D3 plots on The Bubble Index. There may be many places in my code which could be simplified and improved &#8212; I present the current version &#8220;as it is.&#8221;</p>
+<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>The goal is to have the SVG plot fill the width of any screen which accesses the site. The HTML code contains a &#8220;plotarea&#8221; &lt;div&gt; which has its CSS width property set to: width = 100%. Note: this uses jQuery to select the &lt;div&gt;, but certainly there are other ways to select the &lt;div&gt;. Therefore, no matter how wide the screen on the device, the &#8220;areawidth&#8221; variable will store that information. This code setup means that the &#8220;plotarea&#8221; will only resize itself after a page resize and refresh F5, which is ok for my purposes. The aspect ratio and margins are set to visually appealing values.</p>
+<p>The next lines contain the following useful functions:</p>
+<ul>
+<li>D3 date parser to extract date objects from the time-series data</li>
+<li>D3 scale functions to ensure that the time-series data for each time-series is always scaled with the SVG in the x and y directions</li>
+<li>D3 line function to draw the lines on the SVG &#8212; &#8220;basis&#8221; interpolation method</li>
+<li>D3 bisector function to be used in coordination with mouse-over events to determine the nearest &#8220;x&#8221; value of the current position of the cursor</li>
+</ul>
+<pre><code>var index;
+var origData;
+var indices;
+var focus;
+var margin = {
+        top: 20,
+        right: 80,
+        bottom: 100,
+        left: 50
+    },
+    aspect = 1.92,
+    areawidth = $("#plotarea").width(),
+    width = areawidth - margin.left - margin.right,
+    height = Math.round(areawidth / aspect) - margin.top - margin.bottom;
+
+var parseDate = d3.time.format("%Y-%m-%d").parse;
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.category10();
+
+var dateDisplayFormat = d3.time.format("%Y-%m-%d");
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("right");
+
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) {
+        return x(d.date);
+    })
+    .y(function(d) {
+        return y(d.yvalue);
+    });
+
+var bisectDate = d3.bisector(function(d) {
+    return d.date;
+}).left;
+</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Website Update</title>
+		<link>https://lpplmarketwatch.com/2015/05/31/website-update/</link>
+		<comments>https://lpplmarketwatch.com/2015/05/31/website-update/#respond</comments>
+		<pubDate>Sun, 31 May 2015 13:24:05 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[programming]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=608</guid>
+		<description><![CDATA[In the next couple of days I will have the code/scripts ready to batch create 3D contour maps in Three.js for all the thousands of currently monitored markets and stocks. They will then be updated on a weekly basis. Also, with the help of D3.js in Action by Elijah Meeks I will change and improve [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In the next couple of days I will have the code/scripts ready to batch create 3D contour maps in Three.js for all the thousands of currently monitored markets and stocks. They will then be updated on a weekly basis.</p>
+<p>Also, with the help of D3.js in Action by Elijah Meeks I will change and improve the current D3 data graph. If there are any suggestions please leave a comment. My plan is to have the data available for 15 or more windows via a legend/check box/drop-down menu; the user will be able to select/choose which windows he/she wants plotted on the D3 graph. For examples and potential ideas: <a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">D3 Examples</a>. I think this one would be good for the site: <a href="http://charts.animateddata.co.uk/uktemperaturelines/" target="_blank">UK Temperature History</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/05/31/website-update/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>WebGL and 3D Contours</title>
+		<link>https://lpplmarketwatch.com/2015/02/28/webgl-and-3d-contours/</link>
+		<comments>https://lpplmarketwatch.com/2015/02/28/webgl-and-3d-contours/#respond</comments>
+		<pubDate>Sat, 28 Feb 2015 16:25:40 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[contour]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=389</guid>
+		<description><![CDATA[After a long night of learning how to code Three.js, I have had some success in rendering the contours created by The Bubble Index into nice WebGL displays. You can find them all here. The process that created these consisted of several steps. First, I exported a contour 3D grid mesh as a DXF file [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>After a long night of learning how to code Three.js, I have had some success in rendering the contours created by The Bubble Index into nice WebGL displays. You can find them all <a href="lpplmarketwatch.com/3d-contour-examples/">here</a>. The process that created these consisted of several steps. First, I exported a contour 3D grid mesh as a DXF file from 3DField. Then I used <a href="//www.johannes-raida.de/jnetcad.htm" target="_blank">JNetCAD</a> to convert this into a WebGL json file.  JNetCAD describes itself as: JNetCAD is a simple Java GUI for importing and exporting several CAD formats. I agree, it was simple and effective for my purposes. From this point, it was now about coding in Three.js. Three.js has some <a href="//threejs.org/examples/" target="_blank">really nice examples</a> to learn from. It gives users the potential to create some amazing visual displays. And after some debugging and tweaks, I ended up with a nice display.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/02/28/webgl-and-3d-contours/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Geometric Brownian Trajectory Contour</title>
+		<link>https://lpplmarketwatch.com/2015/01/08/geometric-brownian-trajectory-contour/</link>
+		<comments>https://lpplmarketwatch.com/2015/01/08/geometric-brownian-trajectory-contour/#respond</comments>
+		<pubDate>Thu, 08 Jan 2015 19:49:44 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[bitcoin]]></category>
+		<category><![CDATA[contour]]></category>
+		<category><![CDATA[historical]]></category>
+		<category><![CDATA[website]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=239</guid>
+		<description><![CDATA[As a test case for The Bubble Index Contour, I fed it a simple geometric Brownian trajectory. You can see from the contour graph that there are many signals produced. And they are all weak signals with the peaks never exceeding more than 60 in value. It is interesting to compare these results to previous [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>As a test case for The Bubble Index Contour, I fed it a simple geometric Brownian trajectory. You can see from the contour graph that there are many signals produced. And they are all weak signals with the peaks never exceeding more than 60 in value. It is interesting to compare these results to previous examples: such as <a href="//lpplmarketwatch.com/2014/08/the-bubble-contour-map/" target="_blank">Tesla</a>, <a href="//lpplmarketwatch.com/2014/09/bitcoin-update-the-bubble-contour/" target="_blank">Bitcoin</a>, and <a href="//lpplmarketwatch.com/2014/12/the-bubbles-of-1720/" target="_blank">The Bubbles of 1720</a>. In these examples, The Bubble Index reaches much larger magnitudes (typically in the 1,000s) and there is a visually simple structure. The structures seen in Tesla, Bitcoin, and The Bubbles of 1720 have common features. On the other hand, the Geometric Brownian Contour has somewhat irregular patterns. My hunch is that asset prices generated by networks of human traders are far from random and in fact have much in common with Prigogine&#8217;s idea of time irreversibility through correlation formation in a network.</p>
+<p>As a side note, the range of the geometric price path is 89 to 250.</p>
+<p><a href="https://cdn.thebubbleindex.com/Docs/geometric_Contour.pdf">Download The Bubble Index Contour: Geometric Brownian Trajectory</a></p>
+<p style="margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;"><a style="text-decoration: underline;" title="View The Bubble Index Contour: Geometric Brownian on Scribd" href="https://www.scribd.com/doc/252073697/The-Bubble-Index-Contour-Geometric-Brownian">The Bubble Index Contour: Geometric Brownian</a></p>
+<p><iframe id="doc_79448" class="scribd_iframe_embed" src="https://www.scribd.com/embeds/252073697/content?start_page=1&amp;view_mode=scroll&amp;show_recommendations=true" width="100%" height="600" frameborder="0" scrolling="no" data-auto-height="false" data-aspect-ratio="undefined"></iframe></p>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2015/01/08/geometric-brownian-trajectory-contour/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

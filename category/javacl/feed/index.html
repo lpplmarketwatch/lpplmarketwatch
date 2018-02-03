@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>javacl &#8211; LPPL Market Watch</title>
+	<atom:link href="https://lpplmarketwatch.com/category/javacl/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost</link>
+	<description>Blog of The Bubble Index</description>
+	<lastBuildDate>Sat, 03 Feb 2018 02:12:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.2</generator>
+	<item>
+		<title>JavaCL Update</title>
+		<link>https://lpplmarketwatch.com/2014/03/31/javacl-update/</link>
+		<comments>https://lpplmarketwatch.com/2014/03/31/javacl-update/#respond</comments>
+		<pubDate>Mon, 31 Mar 2014 19:11:00 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[code]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[javacl]]></category>
+		<category><![CDATA[programming]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=44</guid>
+		<description><![CDATA[The Java Swing GUI program I wrote to calculate the values for The Bubble Index takes advantage of multi-threading. The parallel threads execute a list of futures formed from Callables. The number of threads available on the host machine will execute and process the queue in parallel. I have two desktops. One has an AMD [&#8230;]]]></description>
+				<content:encoded><![CDATA[<div style="text-align: justify;">The Java Swing GUI program I wrote to calculate the values for The Bubble Index takes advantage of multi-threading. The parallel threads execute a list of futures formed from Callables. The number of threads available on the host machine will execute and process the queue in parallel.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">I have two desktops. One has an AMD FX CPU with 8 processors and the other is an Intel i5 with 4 processors. Their speed is suitable for updating the values of The Bubble Index for all the various assets. However, if I needed to rerun every time-series for every time window, this would take weeks. Each desktop has a GPU ready to be given work. If these GPUs could help compute The Bubble Index, then the time to generate an entire Bubble Index would be magnitudes smaller.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">The Bubble Index algorithm involves curve fitting over a (i, j) 2-Dimensional space of parameters. It searches for the best fit over 342 combinations of parameters. On a time series such as TSLA (Tesla Motor), which contains around 1000 daily prices, the 512 day window will run 488 parallel processes. On the AMD FX with all 8 cores, this would take on the order of 40min. On the Intel around 50min. To calculate the 52, 104, 153, 256, 512 windows for TSLA would take around 1.5 hours.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Now, thanks to OpenCL and JavaCL, running all these windows for TSLA now takes only around 3min on an NVIDIA GT 630. Nothing short of Amazing!</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">The conversion of the Callables and Futures to a structure suitable for GPU parallel processing seemed easy; but the process proved challenging and enlightening. I had plenty of debugging headaches and late nights. The way I proceeded was as follows: First download the NVIDIA driver for my graphics card. Next install the CUDA toolkit. Note: There are really cool CUDA examples written in C included in the toolkit. Then I downloaded Netbeans with Java. A helpful next step was to access the Maven Archetype application called <a href="//code.google.com/p/javacl/wiki/GettingStarted#Setup_a_JavaCL_Maven_project" target="_blank">javacl-simple-tutorial</a>. From this point forward, it was a matter of translating my old code into OpenCL and JavaCL code.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">The javacl simple tutorial provides a nice starting point to begin building a GPU application. The book, <a href="//www.manning.com/scarpino2/" target="_blank">OpenCL in Action</a> was also helpful in understanding the underlying processes involved in memory transfer and kernel execution. One of the biggest issues I had was the allocation of local arrays on the device. I needed each work-item to have its own allocation of a specific float array. Apparently, JavaCL does not support __local float* array (only __local int* array). I finally came to realize that the proper allocation of local memory vs. host memory provided the answer. Since JavaCL does not support __local float*, I struggled to find a solution. In retrospect the solution is simple. Instead of allocating a __local float* array on the device, it is suitable to allocate a large enough array for all work-items to use a single __global float* array shared by the host and device &#8212; each work-item having its own private subsection of this massive array.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">There were also some difficulties in getting the new values produced by the GPU to match the old values produced by the CPU. Previously, all values were stored as a double. Since <a href="//code.google.com/p/javacl/wiki/FAQ#What%27s_up_with_double-precision_floats_?_Are_they_optional" target="_blank">not all OpenCL devices support double-precision</a> floating-point format, I decided to convert the calculations to float. The conversion of all values from double to float did change the values by a small percentage. The differences were AT MOST of magnitude 1.0%. The output from several series were compared and I believe the difference is so small in most cases as to be negligible. The switch to JavaCL is now successful.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Thanks to this new overhaul, the normalization of all The Bubble Indices will proceed much faster. Also, I will be adding many new commodities to the site.</div>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2014/03/31/javacl-update/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

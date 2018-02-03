@@ -97,71 +97,6 @@ img.emoji {
 		<main id="main" class="site-main" role="main">
 
 		
-<article id="post-699" class="post-699 post type-post status-publish format-standard hentry category-website">
-	<div class="blog-item-wrap">
-				<a href="https://lpplmarketwatch.com/2018/02/03/switching-back-to-wordpress-and-github/" title="Switching Back to WordPress and Github" >
-							</a>
-		<div class="post-inner-content">
-			<header class="entry-header page-header">
-
-				<h2 class="entry-title"><a href="https://lpplmarketwatch.com/2018/02/03/switching-back-to-wordpress-and-github/" rel="bookmark">Switching Back to WordPress and Github</a></h2>
-
-								<div class="entry-meta">
-					<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://lpplmarketwatch.com/2018/02/03/switching-back-to-wordpress-and-github/" rel="bookmark"><time class="entry-date published" datetime="2018-02-03T03:07:07+00:00">February 3, 2018</time><time class="updated" datetime="2018-02-03T03:08:15+00:00">February 3, 2018</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://lpplmarketwatch.com/author/lpplmarketwatch/">lpplmarketwatch</a></span></span>				<span class="comments-link"><i class="fa fa-comment-o"></i><a href="https://lpplmarketwatch.com/2018/02/03/switching-back-to-wordpress-and-github/#respond">Leave a comment</a></span>
-				
-				
-				</div><!-- .entry-meta -->
-							</header><!-- .entry-header -->
-
-						<div class="entry-content">
-
-				<p>Bear with me as I switch back to WordPress and Github. WordPress static html export is generally more convenient than the Hugo static site generator. And IPFS is nice, but I just don&#8217;t have the fast Internet required to have a responsive website.</p>
-
-							</div><!-- .entry-content -->
-					</div>
-	</div>
-</article><!-- #post-## -->
-
-<article id="post-697" class="post-697 post type-post status-publish format-standard hentry category-lppl">
-	<div class="blog-item-wrap">
-				<a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/" title="Mean Value vs. Window &#8211; Plot" >
-							</a>
-		<div class="post-inner-content">
-			<header class="entry-header page-header">
-
-				<h2 class="entry-title"><a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/" rel="bookmark">Mean Value vs. Window &#8211; Plot</a></h2>
-
-								<div class="entry-meta">
-					<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/" rel="bookmark"><time class="entry-date published" datetime="2018-02-03T02:53:11+00:00">February 3, 2018</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://lpplmarketwatch.com/author/lpplmarketwatch/">lpplmarketwatch</a></span></span>				<span class="comments-link"><i class="fa fa-comment-o"></i><a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/#respond">Leave a comment</a></span>
-				
-				
-				</div><!-- .entry-meta -->
-							</header><!-- .entry-header -->
-
-						<div class="entry-content">
-
-				<div class="entry-content">
-<p>There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 timeseries.</p>
-<p><a class="fancybox" title="Natural Log" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="Natural Log" /></a><span class="caption">Natural Log</span></p>
-<p>The curve of best fit displayed above is:</p>
-<p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
-<p>a = -9.746393</p>
-<p>b = 3.613444</p>
-<p>Taking this function and rearranging the terms produces:</p>
-<p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
-<p><a class="fancybox" title="Exponential" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="Exponential" /></a><span class="caption">Exponential</span></p>
-<p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
-<p>The next step will be to calculate an empirical distribution for each window.</p>
-<p>Download the pdfs:</p>
-<p><a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Blog/log.pdf">Natural Log Plot</a></p>
-<p><a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Blog/exp.pdf">Exponential Plot</a></p>
-</div>
-
-							</div><!-- .entry-content -->
-					</div>
-	</div>
-</article><!-- #post-## -->
-
 <article id="post-696" class="post-696 post type-post status-publish format-standard hentry category-code category-three-js category-website">
 	<div class="blog-item-wrap">
 				<a href="https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/" title="Three.js 3D Contour Plot &#8211; Part 1" >
@@ -182,15 +117,15 @@ img.emoji {
 
 				<p>Three.js is a powerful tool for visualizing a wide variety of objects including mathematical data. The JavaScript based API greatly simplifies the creation and manipulation of WebGL graphic objects. This post is the first in a series which describe the creation of <a href="https://lpplmarketwatch.com/3d-contour-examples/" target="_blank">The Bubble Index 3D Contours</a>. The first step is to check if the user&#8217;s device supports WebGL. The <code>Detector</code> variable comes from <a href="http://alteredqualia.com/" target="_blank">AlteredQualia</a> and <a href="http://mrdoob.com/" target="_blank">Mr.Doob</a>. If the device supports WebGL, it is time to initialize variables:</p>
 <pre><code>if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-var renderer;
-var texture;
-var scene;
-var camera;
+var renderer; 
+var texture; 
+var scene;     
+var camera;   
 var controls;
 var axes;
-var model;
+var model; 
 var container;
-var rotateX = 0;
+var rotateX = 0;   
 var rotateY = 0;
 
 init();</code></pre>
@@ -245,7 +180,7 @@ init();</code></pre>
 
 						<div class="entry-content">
 
-				<p>Working version of the plot, download <a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Docs/plot_working_07272015.zip">here</a>.</p>
+				<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For instance, assume the &#8220;52 Days&#8221; and &#8220;104 Days&#8221; time-series are currently displayed and the y-range is: [0 &#8211; 123]. Now, the &#8220;2520 Days&#8221; time-series is added by a mouse click. This time series has y-values in the range [420 &#8211; 540]. Thus, the new range [0 &#8211; 540] needs to be established as the new y-axis. However, all the time-series displayed &#8220;pre-click&#8221; (52 and 104 Days) will need to be removed and re-drawn since their paths are scaled based on the [0 &#8211; 123] range of y-values. As seen in <a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-4/" target="_blank">part 4</a>, if the legend button is black with a strike-through, the <code>addWindow()</code> function is called:</p>
 <pre><code>function addWindow(name, addAllBoolean, updateBoolean, longTransition) {
     var transition = longTransition ? 500 : 0;
@@ -360,7 +295,7 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 
 						<div class="entry-content">
 
-				<p>Working version of the plot, download <a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Docs/plot_working_07272015.zip">here</a>.</p>
+				<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>The D3 function, <code>d3.mouse()</code>, provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The <code>mousemove()</code> function was initialized in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a> as follows:</p>
 <pre><code>function mousemove() {
     var x0 = x.invert(d3.mouse(d3.select("#svgMain").node())[0]);
@@ -451,7 +386,7 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 
 						<div class="entry-content">
 
-				<p>Working version of the plot, download <a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Docs/plot_working_07272015.zip">here</a>.</p>
+				<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, the plot display must not fill the entire height of the svg object. As seen in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a>, the plot has a bottom margin of size 100 and a top margin of size 20. This allows space for a legend to span the area below the plot.</p>
 <pre><code>var maxPerRow = Math.ceil(indices.length / 2);
 var legendSpace = width / maxPerRow;</code></pre>
@@ -531,7 +466,7 @@ var legendSpace = width / maxPerRow;</code></pre>
     font-weight: bold;
     text-anchor: middle;
     cursor:pointer;
-}
+} 
 
 .legend-clicked {
     font-size: 16px;
@@ -586,7 +521,7 @@ var legendSpace = width / maxPerRow;</code></pre>
 
 						<div class="entry-content">
 
-				<p>Working version of the plot, download <a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Docs/plot_working_07272015.zip">here</a>.</p>
+				<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes.</p>
 <p>Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; However, note that the y-axis has been scaled (<a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-2/" target="_blank">part 2</a>) based on all the time-series. If a single time-series is removed, the y-axis should be re-scaled and re-drawn. The entire plot will also have to be re-drawn. Removing and added lines will be the subject of later posts.</p>
 <pre><code>    svg.append("g")
@@ -649,7 +584,7 @@ var legendSpace = width / maxPerRow;</code></pre>
 
 						<div class="entry-content">
 
-				<p>Working version of the plot, download <a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Docs/plot_working_07272015.zip">here</a>.</p>
+				<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>As mentioned before, the following code is presented &#8220;as it is&#8221; in its current version. Some functions and variables are presented out of order.</p>
 <p>The SVG variable is created by a D3 selection. The &#8220;plotarea&#8221; &lt;div&gt; is selected as the element where the SVG plot will be created. A &#8220;g&#8221; element is appended to the plot. This will allow the time-series to be grouped together as a single object.</p>
 <pre><code>var svg = d3.select("#plotarea").append("svg")
@@ -733,7 +668,7 @@ var legendSpace = width / maxPerRow;</code></pre>
 						<div class="entry-content">
 
 				<p>To help any one interested in creating &#8220;multi-line&#8221; or multiple line charts with D3.js, I will walk through the various steps required to create the D3 plots on The Bubble Index. There may be many places in my code which could be simplified and improved &#8212; I present the current version &#8220;as it is.&#8221;</p>
-<p>Working version of the plot, download <a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Docs/plot_working_07272015.zip">here</a>.</p>
+<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>The goal is to have the SVG plot fill the width of any screen which accesses the site. The HTML code contains a &#8220;plotarea&#8221; &lt;div&gt; which has its CSS width property set to: width = 100%. Note: this uses jQuery to select the &lt;div&gt;, but certainly there are other ways to select the &lt;div&gt;. Therefore, no matter how wide the screen on the device, the &#8220;areawidth&#8221; variable will store that information. This code setup means that the &#8220;plotarea&#8221; will only resize itself after a page resize and refresh F5, which is ok for my purposes. The aspect ratio and margins are set to visually appealing values.</p>
 <p>The next lines contain the following useful functions:</p>
 <ul>
@@ -815,9 +750,62 @@ var bisectDate = d3.bisector(function(d) {
 						<div class="entry-content">
 
 				<p>The screenshots below were taken from The Bubble Index Plot from the most recent update, July 5, 2015. The bubble in the Chinese mainland shares was noticable. The short term windows show rapid increases starting in December 2014. The China 50 and China 95 plots are the composite indices formed by calculating the 50% and 95% distribution value of the daily values for The Bubble Index for all stocks monitored on both the Shenzhen and Shanghai exchanges.</p>
-<figure id="attachment_618" class="thumbnail wp-caption alignnone" style="width: 310px"><a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Blog/china95.png"><img class="wp-image-618 size-medium" src="https://lpplmarketwatch.com/wp-content/uploads/2015/07/china95-300x168.png" alt="The Bubble Index Composite: China 95%" width="300" height="168" /></a><figcaption class="caption wp-caption-text">The Bubble Index Composite: China 95%</figcaption></figure>
-<figure id="attachment_617" class="thumbnail wp-caption alignnone" style="width: 310px"><a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Blog/china50.png"><img class="wp-image-617 size-medium" src="https://lpplmarketwatch.com/wp-content/uploads/2015/07/china50-300x168.png" alt="The Bubble Index Composite: China 50%" width="300" height="168" /></a><figcaption class="caption wp-caption-text">The Bubble Index Composite: China 50%</figcaption></figure>
-<figure id="attachment_616" class="thumbnail wp-caption alignnone" style="width: 310px"><a href="https://bigttrott-thebubbleindex.netdna-ssl.com/Blog/000001.png"><img class="wp-image-616 size-medium" src="https://lpplmarketwatch.com/wp-content/uploads/2015/07/000001-300x168.png" alt="The Bubble Index: 000001.SS" width="300" height="168" /></a><figcaption class="caption wp-caption-text">The Bubble Index: 000001.SS</figcaption></figure>
+<figure id="attachment_618" class="thumbnail wp-caption alignnone" style="width: 310px"><a href="https://cdn.thebubbleindex.com/Blog/china95.png"><img class="wp-image-618 size-medium" src="https://lpplmarketwatch.com/wp-content/uploads/2015/07/china95-300x168.png" alt="The Bubble Index Composite: China 95%" width="300" height="168" /></a><figcaption class="caption wp-caption-text">The Bubble Index Composite: China 95%</figcaption></figure>
+<figure id="attachment_617" class="thumbnail wp-caption alignnone" style="width: 310px"><a href="https://cdn.thebubbleindex.com/Blog/china50.png"><img class="wp-image-617 size-medium" src="https://lpplmarketwatch.com/wp-content/uploads/2015/07/china50-300x168.png" alt="The Bubble Index Composite: China 50%" width="300" height="168" /></a><figcaption class="caption wp-caption-text">The Bubble Index Composite: China 50%</figcaption></figure>
+<figure id="attachment_616" class="thumbnail wp-caption alignnone" style="width: 310px"><a href="https://cdn.thebubbleindex.com/Blog/000001.png"><img class="wp-image-616 size-medium" src="https://lpplmarketwatch.com/wp-content/uploads/2015/07/000001-300x168.png" alt="The Bubble Index: 000001.SS" width="300" height="168" /></a><figcaption class="caption wp-caption-text">The Bubble Index: 000001.SS</figcaption></figure>
+
+							</div><!-- .entry-content -->
+					</div>
+	</div>
+</article><!-- #post-## -->
+
+<article id="post-608" class="post-608 post type-post status-publish format-standard hentry category-programming category-website">
+	<div class="blog-item-wrap">
+				<a href="https://lpplmarketwatch.com/2015/05/31/website-update/" title="Website Update" >
+							</a>
+		<div class="post-inner-content">
+			<header class="entry-header page-header">
+
+				<h2 class="entry-title"><a href="https://lpplmarketwatch.com/2015/05/31/website-update/" rel="bookmark">Website Update</a></h2>
+
+								<div class="entry-meta">
+					<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://lpplmarketwatch.com/2015/05/31/website-update/" rel="bookmark"><time class="entry-date published" datetime="2015-05-31T13:24:05+00:00">May 31, 2015</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://lpplmarketwatch.com/author/lpplmarketwatch/">lpplmarketwatch</a></span></span>				<span class="comments-link"><i class="fa fa-comment-o"></i><a href="https://lpplmarketwatch.com/2015/05/31/website-update/#respond">Leave a comment</a></span>
+				
+				
+				</div><!-- .entry-meta -->
+							</header><!-- .entry-header -->
+
+						<div class="entry-content">
+
+				<p>In the next couple of days I will have the code/scripts ready to batch create 3D contour maps in Three.js for all the thousands of currently monitored markets and stocks. They will then be updated on a weekly basis.</p>
+<p>Also, with the help of D3.js in Action by Elijah Meeks I will change and improve the current D3 data graph. If there are any suggestions please leave a comment. My plan is to have the data available for 15 or more windows via a legend/check box/drop-down menu; the user will be able to select/choose which windows he/she wants plotted on the D3 graph. For examples and potential ideas: <a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">D3 Examples</a>. I think this one would be good for the site: <a href="http://charts.animateddata.co.uk/uktemperaturelines/" target="_blank">UK Temperature History</a>.</p>
+
+							</div><!-- .entry-content -->
+					</div>
+	</div>
+</article><!-- #post-## -->
+
+<article id="post-590" class="post-590 post type-post status-publish format-standard hentry category-thoughts category-vernadsky">
+	<div class="blog-item-wrap">
+				<a href="https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/" title="LPPL Oscillations as Vernadsky&#8217;s &#8220;Pressure of Life&#8221;" >
+							</a>
+		<div class="post-inner-content">
+			<header class="entry-header page-header">
+
+				<h2 class="entry-title"><a href="https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/" rel="bookmark">LPPL Oscillations as Vernadsky&#8217;s &#8220;Pressure of Life&#8221;</a></h2>
+
+								<div class="entry-meta">
+					<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/" rel="bookmark"><time class="entry-date published" datetime="2015-04-12T19:30:02+00:00">April 12, 2015</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://lpplmarketwatch.com/author/lpplmarketwatch/">lpplmarketwatch</a></span></span>				<span class="comments-link"><i class="fa fa-comment-o"></i><a href="https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/#respond">Leave a comment</a></span>
+				
+				
+				</div><!-- .entry-meta -->
+							</header><!-- .entry-header -->
+
+						<div class="entry-content">
+
+				<p>The H,Q derivative approach taken by The Bubble Index was developed from the paper, <a href="//arxiv.org/abs/cond-mat/0201458" target="_blank">Generalized q-Analysis of Log-Periodicity: Applications to Critical Ruptures</a> by Wei-Xing Zhou and Didier Sornette. This approach has its origin in studying the critical ruptures arising in pressure storage tanks. Pressure and LPPL Oscillations are connected. This implies the existence of some sort of pressure build-up which occurs in financial markets which create LPPL Oscillations. What is this pressure mechanism?</p>
+<p>I wonder if The Bubble Index (and LPPL Oscillations in general), might be measuring directly/indirectly the Vernadskian &#8220;pressure of life&#8221; exerted by individual social groups of H. sapiens on the biosphere. This scale-free &#8220;pressure of life&#8221; exerted by these groups of H. sapiens on the environment builds over time, until it reaches a critical point when the system ruptures. A crash in wealth and a shock to economic growth occurs to relieve the pressure which inevitably results in a depression/recession as the &#8220;pressure of life&#8221; exerted by H. sapiens begins to find a new state.</p>
+<p>Growth is a double edged sword &#8211; creating pressure on the biosphere while increasing the prosperity of H. sapiens in aggregate. However, if this pressure can now be directly/indirectly measured, the interaction between H. sapiens and the biosphere can be engineered. It is possible that the prosperity of H. sapiens can be designed to increase with a simultaneous reduction in pressure exerted on the biosphere.</p>
 
 							</div><!-- .entry-content -->
 					</div>
@@ -850,12 +838,6 @@ var bisectDate = d3.bisector(function(d) {
 </form>
 </aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
 											<li>
-					<a href="https://lpplmarketwatch.com/2018/02/03/switching-back-to-wordpress-and-github/">Switching Back to WordPress and Github</a>
-									</li>
-											<li>
-					<a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/">Mean Value vs. Window &#8211; Plot</a>
-									</li>
-											<li>
 					<a href="https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/">Three.js 3D Contour Plot &#8211; Part 1</a>
 									</li>
 											<li>
@@ -864,10 +846,15 @@ var bisectDate = d3.bisector(function(d) {
 											<li>
 					<a href="https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/">D3.js Multiple Line Plot &#8211; Part 5</a>
 									</li>
+											<li>
+					<a href="https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/">D3.js Multiple Line Plot &#8211; Part 4</a>
+									</li>
+											<li>
+					<a href="https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/">D3.js Multiple Line Plot &#8211; Part 3</a>
+									</li>
 					</ul>
 		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='https://lpplmarketwatch.com/2015/07/three-js-3d-contour-plot-part-1/' rel='external nofollow' class='url'>Three.js 3D Contour Plot &#8211; Part 1 | LPPL Market Watch</a></span> on <a href="https://lpplmarketwatch.com/3d-contour-examples/#comment-2">3D Contour Examples</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
-			<li><a href='https://lpplmarketwatch.com/2018/02/'>February 2018</a></li>
-	<li><a href='https://lpplmarketwatch.com/2015/07/'>July 2015</a></li>
+			<li><a href='https://lpplmarketwatch.com/2015/07/'>July 2015</a></li>
 	<li><a href='https://lpplmarketwatch.com/2015/05/'>May 2015</a></li>
 	<li><a href='https://lpplmarketwatch.com/2015/04/'>April 2015</a></li>
 	<li><a href='https://lpplmarketwatch.com/2015/03/'>March 2015</a></li>
@@ -891,135 +878,135 @@ var bisectDate = d3.bisector(function(d) {
 	<li><a href='https://lpplmarketwatch.com/2013/05/'>May 2013</a></li>
 		</ul>
 		</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
-	<li class="cat-item cat-item-2"><a href="https://lpplmarketwatch.com/category/aex/" >aex</a>
+	<li class="cat-item cat-item-68"><a href="https://lpplmarketwatch.com/category/aex/" >aex</a>
 </li>
-	<li class="cat-item cat-item-3"><a href="https://lpplmarketwatch.com/category/amsterdam/" >amsterdam</a>
+	<li class="cat-item cat-item-69"><a href="https://lpplmarketwatch.com/category/amsterdam/" >amsterdam</a>
 </li>
-	<li class="cat-item cat-item-4"><a href="https://lpplmarketwatch.com/category/argentina/" >Argentina</a>
+	<li class="cat-item cat-item-70"><a href="https://lpplmarketwatch.com/category/argentina/" >Argentina</a>
 </li>
-	<li class="cat-item cat-item-5"><a href="https://lpplmarketwatch.com/category/asia/" >asia</a>
+	<li class="cat-item cat-item-71"><a href="https://lpplmarketwatch.com/category/asia/" >asia</a>
 </li>
-	<li class="cat-item cat-item-6"><a href="https://lpplmarketwatch.com/category/bitcoin/" >bitcoin</a>
+	<li class="cat-item cat-item-72"><a href="https://lpplmarketwatch.com/category/bitcoin/" >bitcoin</a>
 </li>
-	<li class="cat-item cat-item-7"><a href="https://lpplmarketwatch.com/category/bond/" >bond</a>
+	<li class="cat-item cat-item-73"><a href="https://lpplmarketwatch.com/category/bond/" >bond</a>
 </li>
-	<li class="cat-item cat-item-8"><a href="https://lpplmarketwatch.com/category/bovespa/" >bovespa</a>
+	<li class="cat-item cat-item-74"><a href="https://lpplmarketwatch.com/category/bovespa/" >bovespa</a>
 </li>
-	<li class="cat-item cat-item-9"><a href="https://lpplmarketwatch.com/category/brazil/" >brazil</a>
+	<li class="cat-item cat-item-75"><a href="https://lpplmarketwatch.com/category/brazil/" >brazil</a>
 </li>
-	<li class="cat-item cat-item-10"><a href="https://lpplmarketwatch.com/category/bse/" >bse</a>
+	<li class="cat-item cat-item-76"><a href="https://lpplmarketwatch.com/category/bse/" >bse</a>
 </li>
-	<li class="cat-item cat-item-11"><a href="https://lpplmarketwatch.com/category/buenos-aires/" >Buenos aires</a>
+	<li class="cat-item cat-item-77"><a href="https://lpplmarketwatch.com/category/buenos-aires/" >Buenos aires</a>
 </li>
-	<li class="cat-item cat-item-12"><a href="https://lpplmarketwatch.com/category/caldaro/" >caldaro</a>
+	<li class="cat-item cat-item-78"><a href="https://lpplmarketwatch.com/category/caldaro/" >caldaro</a>
 </li>
-	<li class="cat-item cat-item-13"><a href="https://lpplmarketwatch.com/category/china/" >china</a>
+	<li class="cat-item cat-item-79"><a href="https://lpplmarketwatch.com/category/china/" >china</a>
 </li>
-	<li class="cat-item cat-item-14"><a href="https://lpplmarketwatch.com/category/code/" >code</a>
+	<li class="cat-item cat-item-80"><a href="https://lpplmarketwatch.com/category/code/" >code</a>
 </li>
-	<li class="cat-item cat-item-15"><a href="https://lpplmarketwatch.com/category/contour/" >contour</a>
+	<li class="cat-item cat-item-81"><a href="https://lpplmarketwatch.com/category/contour/" >contour</a>
 </li>
-	<li class="cat-item cat-item-16"><a href="https://lpplmarketwatch.com/category/crash/" >crash</a>
+	<li class="cat-item cat-item-82"><a href="https://lpplmarketwatch.com/category/crash/" >crash</a>
 </li>
-	<li class="cat-item cat-item-17"><a href="https://lpplmarketwatch.com/category/crisis/" >crisis</a>
+	<li class="cat-item cat-item-83"><a href="https://lpplmarketwatch.com/category/crisis/" >crisis</a>
 </li>
-	<li class="cat-item cat-item-18"><a href="https://lpplmarketwatch.com/category/currency/" >currency</a>
+	<li class="cat-item cat-item-84"><a href="https://lpplmarketwatch.com/category/currency/" >currency</a>
 </li>
-	<li class="cat-item cat-item-19"><a href="https://lpplmarketwatch.com/category/d3/" >d3</a>
+	<li class="cat-item cat-item-85"><a href="https://lpplmarketwatch.com/category/d3/" >d3</a>
 </li>
-	<li class="cat-item cat-item-20"><a href="https://lpplmarketwatch.com/category/daneric/" >daneric</a>
+	<li class="cat-item cat-item-86"><a href="https://lpplmarketwatch.com/category/daneric/" >daneric</a>
 </li>
-	<li class="cat-item cat-item-21"><a href="https://lpplmarketwatch.com/category/dax/" >dax</a>
+	<li class="cat-item cat-item-87"><a href="https://lpplmarketwatch.com/category/dax/" >dax</a>
 </li>
-	<li class="cat-item cat-item-22"><a href="https://lpplmarketwatch.com/category/didier-sornette/" >didier sornette</a>
+	<li class="cat-item cat-item-88"><a href="https://lpplmarketwatch.com/category/didier-sornette/" >didier sornette</a>
 </li>
-	<li class="cat-item cat-item-23"><a href="https://lpplmarketwatch.com/category/dollar/" >dollar</a>
+	<li class="cat-item cat-item-89"><a href="https://lpplmarketwatch.com/category/dollar/" >dollar</a>
 </li>
-	<li class="cat-item cat-item-24"><a href="https://lpplmarketwatch.com/category/dow-jones/" >dow jones</a>
+	<li class="cat-item cat-item-90"><a href="https://lpplmarketwatch.com/category/dow-jones/" >dow jones</a>
 </li>
-	<li class="cat-item cat-item-25"><a href="https://lpplmarketwatch.com/category/dutch/" >dutch</a>
+	<li class="cat-item cat-item-91"><a href="https://lpplmarketwatch.com/category/dutch/" >dutch</a>
 </li>
-	<li class="cat-item cat-item-26"><a href="https://lpplmarketwatch.com/category/elliott-waves/" >elliott waves</a>
+	<li class="cat-item cat-item-92"><a href="https://lpplmarketwatch.com/category/elliott-waves/" >elliott waves</a>
 </li>
-	<li class="cat-item cat-item-27"><a href="https://lpplmarketwatch.com/category/euro/" >euro</a>
+	<li class="cat-item cat-item-93"><a href="https://lpplmarketwatch.com/category/euro/" >euro</a>
 </li>
-	<li class="cat-item cat-item-28"><a href="https://lpplmarketwatch.com/category/europe/" >europe</a>
+	<li class="cat-item cat-item-94"><a href="https://lpplmarketwatch.com/category/europe/" >europe</a>
 </li>
-	<li class="cat-item cat-item-29"><a href="https://lpplmarketwatch.com/category/ftse/" >ftse</a>
+	<li class="cat-item cat-item-95"><a href="https://lpplmarketwatch.com/category/ftse/" >ftse</a>
 </li>
-	<li class="cat-item cat-item-30"><a href="https://lpplmarketwatch.com/category/germany/" >germany</a>
+	<li class="cat-item cat-item-96"><a href="https://lpplmarketwatch.com/category/germany/" >germany</a>
 </li>
-	<li class="cat-item cat-item-31"><a href="https://lpplmarketwatch.com/category/gold/" >gold</a>
+	<li class="cat-item cat-item-97"><a href="https://lpplmarketwatch.com/category/gold/" >gold</a>
 </li>
-	<li class="cat-item cat-item-32"><a href="https://lpplmarketwatch.com/category/hang-seng/" >hang seng</a>
+	<li class="cat-item cat-item-98"><a href="https://lpplmarketwatch.com/category/hang-seng/" >hang seng</a>
 </li>
-	<li class="cat-item cat-item-33"><a href="https://lpplmarketwatch.com/category/historical/" >historical</a>
+	<li class="cat-item cat-item-99"><a href="https://lpplmarketwatch.com/category/historical/" >historical</a>
 </li>
-	<li class="cat-item cat-item-34"><a href="https://lpplmarketwatch.com/category/hong-kong/" >hong kong</a>
+	<li class="cat-item cat-item-100"><a href="https://lpplmarketwatch.com/category/hong-kong/" >hong kong</a>
 </li>
-	<li class="cat-item cat-item-35"><a href="https://lpplmarketwatch.com/category/india/" >india</a>
+	<li class="cat-item cat-item-101"><a href="https://lpplmarketwatch.com/category/india/" >india</a>
 </li>
-	<li class="cat-item cat-item-36"><a href="https://lpplmarketwatch.com/category/jakarta/" >Jakarta</a>
+	<li class="cat-item cat-item-102"><a href="https://lpplmarketwatch.com/category/jakarta/" >Jakarta</a>
 </li>
-	<li class="cat-item cat-item-37"><a href="https://lpplmarketwatch.com/category/japan/" >japan</a>
+	<li class="cat-item cat-item-103"><a href="https://lpplmarketwatch.com/category/japan/" >japan</a>
 </li>
-	<li class="cat-item cat-item-38"><a href="https://lpplmarketwatch.com/category/java/" >java</a>
+	<li class="cat-item cat-item-104"><a href="https://lpplmarketwatch.com/category/java/" >java</a>
 </li>
-	<li class="cat-item cat-item-39"><a href="https://lpplmarketwatch.com/category/javacl/" >javacl</a>
+	<li class="cat-item cat-item-105"><a href="https://lpplmarketwatch.com/category/javacl/" >javacl</a>
 </li>
-	<li class="cat-item cat-item-40"><a href="https://lpplmarketwatch.com/category/jean-paul-rodrigue/" >jean-paul rodrigue</a>
+	<li class="cat-item cat-item-106"><a href="https://lpplmarketwatch.com/category/jean-paul-rodrigue/" >jean-paul rodrigue</a>
 </li>
-	<li class="cat-item cat-item-41"><a href="https://lpplmarketwatch.com/category/jkse/" >jkse</a>
+	<li class="cat-item cat-item-107"><a href="https://lpplmarketwatch.com/category/jkse/" >jkse</a>
 </li>
-	<li class="cat-item cat-item-42"><a href="https://lpplmarketwatch.com/category/karl-marx/" >karl marx</a>
+	<li class="cat-item cat-item-108"><a href="https://lpplmarketwatch.com/category/karl-marx/" >karl marx</a>
 </li>
-	<li class="cat-item cat-item-43"><a href="https://lpplmarketwatch.com/category/klse/" >klse</a>
+	<li class="cat-item cat-item-109"><a href="https://lpplmarketwatch.com/category/klse/" >klse</a>
 </li>
-	<li class="cat-item cat-item-44"><a href="https://lpplmarketwatch.com/category/kuala/" >kuala</a>
+	<li class="cat-item cat-item-110"><a href="https://lpplmarketwatch.com/category/kuala/" >kuala</a>
 </li>
-	<li class="cat-item cat-item-45"><a href="https://lpplmarketwatch.com/category/lppl/" >LPPL</a>
+	<li class="cat-item cat-item-111"><a href="https://lpplmarketwatch.com/category/lppl/" >LPPL</a>
 </li>
-	<li class="cat-item cat-item-46"><a href="https://lpplmarketwatch.com/category/lumpur/" >lumpur</a>
+	<li class="cat-item cat-item-112"><a href="https://lpplmarketwatch.com/category/lumpur/" >lumpur</a>
 </li>
-	<li class="cat-item cat-item-47"><a href="https://lpplmarketwatch.com/category/markets/" >markets</a>
+	<li class="cat-item cat-item-113"><a href="https://lpplmarketwatch.com/category/markets/" >markets</a>
 </li>
-	<li class="cat-item cat-item-48"><a href="https://lpplmarketwatch.com/category/merval/" >merval</a>
+	<li class="cat-item cat-item-114"><a href="https://lpplmarketwatch.com/category/merval/" >merval</a>
 </li>
-	<li class="cat-item cat-item-49"><a href="https://lpplmarketwatch.com/category/nasdaq/" >nasdaq</a>
+	<li class="cat-item cat-item-115"><a href="https://lpplmarketwatch.com/category/nasdaq/" >nasdaq</a>
 </li>
-	<li class="cat-item cat-item-50"><a href="https://lpplmarketwatch.com/category/nikkei/" >nikkei</a>
+	<li class="cat-item cat-item-116"><a href="https://lpplmarketwatch.com/category/nikkei/" >nikkei</a>
 </li>
-	<li class="cat-item cat-item-51"><a href="https://lpplmarketwatch.com/category/programming/" >programming</a>
+	<li class="cat-item cat-item-117"><a href="https://lpplmarketwatch.com/category/programming/" >programming</a>
 </li>
-	<li class="cat-item cat-item-52"><a href="https://lpplmarketwatch.com/category/robert-prechter/" >robert prechter</a>
+	<li class="cat-item cat-item-118"><a href="https://lpplmarketwatch.com/category/robert-prechter/" >robert prechter</a>
 </li>
-	<li class="cat-item cat-item-53"><a href="https://lpplmarketwatch.com/category/rupee/" >rupee</a>
+	<li class="cat-item cat-item-119"><a href="https://lpplmarketwatch.com/category/rupee/" >rupee</a>
 </li>
-	<li class="cat-item cat-item-54"><a href="https://lpplmarketwatch.com/category/sensex/" >sensex</a>
+	<li class="cat-item cat-item-120"><a href="https://lpplmarketwatch.com/category/sensex/" >sensex</a>
 </li>
-	<li class="cat-item cat-item-55"><a href="https://lpplmarketwatch.com/category/shanghai/" >shanghai</a>
+	<li class="cat-item cat-item-121"><a href="https://lpplmarketwatch.com/category/shanghai/" >shanghai</a>
 </li>
-	<li class="cat-item cat-item-56"><a href="https://lpplmarketwatch.com/category/socionomics/" >socionomics</a>
+	<li class="cat-item cat-item-122"><a href="https://lpplmarketwatch.com/category/socionomics/" >socionomics</a>
 </li>
-	<li class="cat-item cat-item-57"><a href="https://lpplmarketwatch.com/category/south-america/" >south america</a>
+	<li class="cat-item cat-item-123"><a href="https://lpplmarketwatch.com/category/south-america/" >south america</a>
 </li>
-	<li class="cat-item cat-item-58"><a href="https://lpplmarketwatch.com/category/standard-and-poors/" >standard and poors</a>
+	<li class="cat-item cat-item-124"><a href="https://lpplmarketwatch.com/category/standard-and-poors/" >standard and poors</a>
 </li>
-	<li class="cat-item cat-item-59"><a href="https://lpplmarketwatch.com/category/thoughts/" >thoughts</a>
+	<li class="cat-item cat-item-125"><a href="https://lpplmarketwatch.com/category/thoughts/" >thoughts</a>
 </li>
-	<li class="cat-item cat-item-60"><a href="https://lpplmarketwatch.com/category/three-js/" >three.js</a>
+	<li class="cat-item cat-item-126"><a href="https://lpplmarketwatch.com/category/three-js/" >three.js</a>
 </li>
 	<li class="cat-item cat-item-1"><a href="https://lpplmarketwatch.com/category/uncategorized/" >Uncategorized</a>
 </li>
-	<li class="cat-item cat-item-61"><a href="https://lpplmarketwatch.com/category/united-states/" >united states</a>
+	<li class="cat-item cat-item-127"><a href="https://lpplmarketwatch.com/category/united-states/" >united states</a>
 </li>
-	<li class="cat-item cat-item-62"><a href="https://lpplmarketwatch.com/category/vernadsky/" >vernadsky</a>
+	<li class="cat-item cat-item-128"><a href="https://lpplmarketwatch.com/category/vernadsky/" >vernadsky</a>
 </li>
-	<li class="cat-item cat-item-63"><a href="https://lpplmarketwatch.com/category/vienna/" >vienna</a>
+	<li class="cat-item cat-item-129"><a href="https://lpplmarketwatch.com/category/vienna/" >vienna</a>
 </li>
-	<li class="cat-item cat-item-64"><a href="https://lpplmarketwatch.com/category/website/" >website</a>
+	<li class="cat-item cat-item-130"><a href="https://lpplmarketwatch.com/category/website/" >website</a>
 </li>
-	<li class="cat-item cat-item-65"><a href="https://lpplmarketwatch.com/category/wilshire-5000/" >wilshire 5000</a>
+	<li class="cat-item cat-item-131"><a href="https://lpplmarketwatch.com/category/wilshire-5000/" >wilshire 5000</a>
 </li>
 		</ul>
 </aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
