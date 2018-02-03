@@ -12,12 +12,46 @@
 	<atom:link href="https://lpplmarketwatch.com/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost</link>
 	<description>Blog of The Bubble Index</description>
-	<lastBuildDate>Sat, 03 Feb 2018 02:12:08 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 03 Feb 2018 17:28:08 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.2</generator>
 	<item>
+		<title>Mean Value vs. Window &#8211; Plot</title>
+		<link>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/</link>
+		<comments>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/#respond</comments>
+		<pubDate>Sat, 03 Feb 2018 17:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[analysis]]></category>
+		<category><![CDATA[LPPL]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=1474</guid>
+		<description><![CDATA[Mean Value vs. Window &#8211; Plot There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated [&#8230;]]]></description>
+				<content:encoded><![CDATA[<article class="post">
+<h1 class="title">Mean Value vs. Window &#8211; Plot</h1>
+<div class="entry-content">
+<p>There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 timeseries.</p>
+<p><a class="fancybox" title="Natural Log" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="Natural Log" /></a><span class="caption">Natural Log</span></p>
+<p>The curve of best fit displayed above is:</p>
+<p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
+<p>a = -9.746393</p>
+<p>b = 3.613444</p>
+<p>Taking this function and rearranging the terms produces:</p>
+<p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
+<p><a class="fancybox" title="Exponential" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="Exponential" /></a><span class="caption">Exponential</span></p>
+<p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
+<p>The next step will be to calculate an empirical distribution for each window.</p>
+<p>Download the pdfs:</p>
+<p><a href="https://cdn.thebubbleindex.com/Blog/log.pdf">Natural Log Plot</a></p>
+<p><a href="https://cdn.thebubbleindex.com/Blog/exp.pdf">Exponential Plot</a></p>
+</div>
+</article>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
 		<title>Three.js 3D Contour Plot &#8211; Part 1</title>
 		<link>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/</link>
 		<comments>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/#respond</comments>
@@ -637,24 +671,6 @@ var bisectDate = d3.bisector(function(d) {
 <p>Also, with the help of D3.js in Action by Elijah Meeks I will change and improve the current D3 data graph. If there are any suggestions please leave a comment. My plan is to have the data available for 15 or more windows via a legend/check box/drop-down menu; the user will be able to select/choose which windows he/she wants plotted on the D3 graph. For examples and potential ideas: <a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">D3 Examples</a>. I think this one would be good for the site: <a href="http://charts.animateddata.co.uk/uktemperaturelines/" target="_blank">UK Temperature History</a>.</p>
 ]]></content:encoded>
 			<wfw:commentRss>https://lpplmarketwatch.com/2015/05/31/website-update/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>LPPL Oscillations as Vernadsky&#8217;s &#8220;Pressure of Life&#8221;</title>
-		<link>https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/</link>
-		<comments>https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/#respond</comments>
-		<pubDate>Sun, 12 Apr 2015 19:30:02 +0000</pubDate>
-		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
-				<category><![CDATA[thoughts]]></category>
-		<category><![CDATA[vernadsky]]></category>
-
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=590</guid>
-		<description><![CDATA[The H,Q derivative approach taken by The Bubble Index was developed from the paper, Generalized q-Analysis of Log-Periodicity: Applications to Critical Ruptures by Wei-Xing Zhou and Didier Sornette. This approach has its origin in studying the critical ruptures arising in pressure storage tanks. Pressure and LPPL Oscillations are connected. This implies the existence of some sort of pressure build-up which [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>The H,Q derivative approach taken by The Bubble Index was developed from the paper, <a href="//arxiv.org/abs/cond-mat/0201458" target="_blank">Generalized q-Analysis of Log-Periodicity: Applications to Critical Ruptures</a> by Wei-Xing Zhou and Didier Sornette. This approach has its origin in studying the critical ruptures arising in pressure storage tanks. Pressure and LPPL Oscillations are connected. This implies the existence of some sort of pressure build-up which occurs in financial markets which create LPPL Oscillations. What is this pressure mechanism?</p>
-<p>I wonder if The Bubble Index (and LPPL Oscillations in general), might be measuring directly/indirectly the Vernadskian &#8220;pressure of life&#8221; exerted by individual social groups of H. sapiens on the biosphere. This scale-free &#8220;pressure of life&#8221; exerted by these groups of H. sapiens on the environment builds over time, until it reaches a critical point when the system ruptures. A crash in wealth and a shock to economic growth occurs to relieve the pressure which inevitably results in a depression/recession as the &#8220;pressure of life&#8221; exerted by H. sapiens begins to find a new state.</p>
-<p>Growth is a double edged sword &#8211; creating pressure on the biosphere while increasing the prosperity of H. sapiens in aggregate. However, if this pressure can now be directly/indirectly measured, the interaction between H. sapiens and the biosphere can be engineered. It is possible that the prosperity of H. sapiens can be designed to increase with a simultaneous reduction in pressure exerted on the biosphere.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/04/12/lppl-oscillations-as-vernadskys-pressure-of-life-for-homo-sapiens/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 	</channel>

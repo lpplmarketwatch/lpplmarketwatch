@@ -12,12 +12,46 @@
 	<atom:link href="https://lpplmarketwatch.com/category/lppl/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost</link>
 	<description>Blog of The Bubble Index</description>
-	<lastBuildDate>Sat, 03 Feb 2018 02:12:08 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 03 Feb 2018 17:28:08 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.2</generator>
 	<item>
+		<title>Mean Value vs. Window &#8211; Plot</title>
+		<link>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/</link>
+		<comments>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/#respond</comments>
+		<pubDate>Sat, 03 Feb 2018 17:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[analysis]]></category>
+		<category><![CDATA[LPPL]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=1474</guid>
+		<description><![CDATA[Mean Value vs. Window &#8211; Plot There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated [&#8230;]]]></description>
+				<content:encoded><![CDATA[<article class="post">
+<h1 class="title">Mean Value vs. Window &#8211; Plot</h1>
+<div class="entry-content">
+<p>There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 timeseries.</p>
+<p><a class="fancybox" title="Natural Log" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="Natural Log" /></a><span class="caption">Natural Log</span></p>
+<p>The curve of best fit displayed above is:</p>
+<p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
+<p>a = -9.746393</p>
+<p>b = 3.613444</p>
+<p>Taking this function and rearranging the terms produces:</p>
+<p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
+<p><a class="fancybox" title="Exponential" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="Exponential" /></a><span class="caption">Exponential</span></p>
+<p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
+<p>The next step will be to calculate an empirical distribution for each window.</p>
+<p>Download the pdfs:</p>
+<p><a href="https://cdn.thebubbleindex.com/Blog/log.pdf">Natural Log Plot</a></p>
+<p><a href="https://cdn.thebubbleindex.com/Blog/exp.pdf">Exponential Plot</a></p>
+</div>
+</article>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
 		<title>Elliott Wave Count and LPPL Oscillations</title>
 		<link>https://lpplmarketwatch.com/2014/10/25/elliott-wave-count-and-lppl-oscillations/</link>
 		<comments>https://lpplmarketwatch.com/2014/10/25/elliott-wave-count-and-lppl-oscillations/#respond</comments>
@@ -443,46 +477,6 @@
 <p><b>Figure 2</b>&nbsp;produced with C++ code. Nikkei Index. Six year window of data. Every data point is a new week. Every peak in the market is represented by a red vertical line.<br />1. May 1, 1995 &#8211; followed by a 15% drop<br />2. November 18, 1996 &#8211; followed by a 18% drop<br />3. September 17, 2001 &#8211; exact bottom of downturn (or perhaps related to Sept. 11, 2001)<br />4. March 29, 2010 &#8211; followed by a 20% drop<br />5. March 12, 2012 &#8211; followed by a 16.7% drop</p>
 ]]></content:encoded>
 			<wfw:commentRss>https://lpplmarketwatch.com/2013/05/16/nikkei-week-ending-may-10-2013/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Hang Seng &#8211; Week Ending May 10, 2013</title>
-		<link>https://lpplmarketwatch.com/2013/05/16/hang-seng-week-ending-may-10-2013/</link>
-		<comments>https://lpplmarketwatch.com/2013/05/16/hang-seng-week-ending-may-10-2013/#respond</comments>
-		<pubDate>Thu, 16 May 2013 19:12:00 +0000</pubDate>
-		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
-				<category><![CDATA[hang seng]]></category>
-		<category><![CDATA[hong kong]]></category>
-		<category><![CDATA[LPPL]]></category>
-
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=102</guid>
-		<description><![CDATA[May 10, 2013: Looking at the Figure 1, I do not see any chances of there being a bubble in the Hang Seng Index at this time. However, based on Figure 2, there may a be growing peak. Figure 1 Figure 1&#160;produced with C++ code. Hang Seng Index. Seven year window of data. Every data [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>May 10, 2013:</p>
-<p>Looking at the Figure 1, I do not see any chances of there being a bubble in the Hang Seng Index at this time. However, based on Figure 2, there may a be growing peak.</p>
-<table  class=" table table-hover" align="center" cellpadding="0" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align: center;">
-<tbody>
-<tr>
-<td style="text-align: center;"><a href="//lpplmarketwatch.com/wp-content/uploads/2013/05/HangSengOfficial.jpeg" style="margin-left: auto; margin-right: auto;"><img border="0" height="452" src="//lpplmarketwatch.com/wp-content/uploads/2013/05/HangSengOfficial-300x212.jpeg" width="640" /></a></td>
-</tr>
-<tr>
-<td style="text-align: center;">Figure 1</td>
-</tr>
-</tbody>
-</table>
-<p><b>Figure 1</b>&nbsp;produced with C++ code. Hang Seng Index. Seven year window of data. Every data point is a new week. Every peak in the market is represented by a red vertical line.<br />1. August 4, 1997 &#8212; followed by a 46.6% drop<br />2. July 17, 2000 &#8212; followed by a 19.8% drop<br />3.&nbsp;February&nbsp;23, 2004 &#8212; followed by a 18.9%<br />4. October 29, 2007 &#8212; followed by a 58.6% drop<br />5. April 4, 2011 &#8212; followed by a 27.9% drop</p>
-<table  class=" table table-hover" align="center" cellpadding="0" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align: center;">
-<tbody>
-<tr>
-<td style="text-align: center;"><a href="//lpplmarketwatch.com/wp-content/uploads/2013/05/HangSengOfficialsixyear.jpeg" style="margin-left: auto; margin-right: auto;"><img border="0" height="452" src="//lpplmarketwatch.com/wp-content/uploads/2013/05/HangSengOfficialsixyear-300x212.jpeg" width="640" /></a></td>
-</tr>
-<tr>
-<td style="text-align: center;">Figure 2</td>
-</tr>
-</tbody>
-</table>
-<p><b>Figure 2</b>&nbsp;produced with C++ code. Hang Seng Index. Six year window of data. Every data point is a new week. Every peak in the market is represented by a red vertical line.<br />1. August 4, 1997 &#8212; followed by a 46.6% drop<br />2. January 4, 1999 &#8212; followed by a quick 14% drop<br />3. July 17, 2000 &#8212; followed by a 19.8% drop<br />4. February 23, 2004 &#8212; followed by a 18.9%<br />5. October 29, 2007 &#8212; followed by a 58.6% drop<br />6. May 12, 2008 &#8212; followed by a 51% drop<br />7. November 30, 2009 &#8212; followed by a 13% drop<br />8. April 4, 2011 &#8212; followed by a 27.9% drop</p>
-]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2013/05/16/hang-seng-week-ending-may-10-2013/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 	</channel>

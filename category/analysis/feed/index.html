@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>analysis &#8211; LPPL Market Watch</title>
+	<atom:link href="https://lpplmarketwatch.com/category/analysis/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost</link>
+	<description>Blog of The Bubble Index</description>
+	<lastBuildDate>Sat, 03 Feb 2018 17:28:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.2</generator>
+	<item>
+		<title>Mean Value vs. Window &#8211; Plot</title>
+		<link>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/</link>
+		<comments>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/#respond</comments>
+		<pubDate>Sat, 03 Feb 2018 17:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
+				<category><![CDATA[analysis]]></category>
+		<category><![CDATA[LPPL]]></category>
+
+		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=1474</guid>
+		<description><![CDATA[Mean Value vs. Window &#8211; Plot There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated [&#8230;]]]></description>
+				<content:encoded><![CDATA[<article class="post">
+<h1 class="title">Mean Value vs. Window &#8211; Plot</h1>
+<div class="entry-content">
+<p>There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 timeseries.</p>
+<p><a class="fancybox" title="Natural Log" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="Natural Log" /></a><span class="caption">Natural Log</span></p>
+<p>The curve of best fit displayed above is:</p>
+<p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
+<p>a = -9.746393</p>
+<p>b = 3.613444</p>
+<p>Taking this function and rearranging the terms produces:</p>
+<p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
+<p><a class="fancybox" title="Exponential" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="Exponential" /></a><span class="caption">Exponential</span></p>
+<p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
+<p>The next step will be to calculate an empirical distribution for each window.</p>
+<p>Download the pdfs:</p>
+<p><a href="https://cdn.thebubbleindex.com/Blog/log.pdf">Natural Log Plot</a></p>
+<p><a href="https://cdn.thebubbleindex.com/Blog/exp.pdf">Exponential Plot</a></p>
+</div>
+</article>
+]]></content:encoded>
+			<wfw:commentRss>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
