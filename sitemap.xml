@@ -4,11 +4,15 @@
 	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://lpplmarketwatch.com/</loc>
-	<lastmod>2018-02-03T17:29:43+00:00</lastmod>
+	<lastmod>2018-02-03T19:51:47+00:00</lastmod>
+</url>
+<url>
+	<loc>https://lpplmarketwatch.com/2018/02/03/bitcoin-phase-change-prediction-analysis/</loc>
+	<lastmod>2018-02-03T19:49:12+00:00</lastmod>
 </url>
 <url>
 	<loc>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/</loc>
-	<lastmod>2018-02-03T17:25:25+00:00</lastmod>
+	<lastmod>2018-02-03T19:12:13+00:00</lastmod>
 </url>
 <url>
 	<loc>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/</loc>

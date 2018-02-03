@@ -78,7 +78,11 @@ img.emoji {
 															<p class="site-name">																		<a class="navbar-brand" href="https://lpplmarketwatch.com/" title="LPPL Market Watch" rel="home">LPPL Market Watch</a>
 																</p>																													</div><!-- end of #logo -->
 						</div>
-											</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-menu-1" class="nav navbar-nav"><li id="menu-item-1481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1481"><a href="https://lpplmarketwatch.com/3d-contour-examples/">3D Contour Examples</a></li>
+<li id="menu-item-1482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1482"><a href="https://lpplmarketwatch.com/links/">Links</a></li>
+<li id="menu-item-1483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1483"><a href="https://lpplmarketwatch.com/contact/">Contact</a></li>
+<li id="menu-item-1484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1484"><a href="https://lpplmarketwatch.com/results/">Results</a></li>
+</ul></div>					</div>
 				</div>
 			</div>
 		</nav><!-- .site-navigation -->
@@ -111,7 +115,7 @@ img.emoji {
 				<h2 class="entry-title"><a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/" rel="bookmark">Mean Value vs. Window &#8211; Plot</a></h2>
 
 								<div class="entry-meta">
-					<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/" rel="bookmark"><time class="entry-date published" datetime="2018-02-03T17:25:25+00:00">February 3, 2018</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://lpplmarketwatch.com/author/lpplmarketwatch/">lpplmarketwatch</a></span></span>				<span class="comments-link"><i class="fa fa-comment-o"></i><a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/#disqus_thread"><span class="dsq-postid" data-dsqidentifier="1474 https://lpplmarketwatch.com/?p=1474">Leave a comment</span></a></span>
+					<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/" rel="bookmark"><time class="entry-date published" datetime="2018-02-03T17:25:25+00:00">February 3, 2018</time><time class="updated" datetime="2018-02-03T19:12:13+00:00">February 3, 2018</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://lpplmarketwatch.com/author/lpplmarketwatch/">lpplmarketwatch</a></span></span>				<span class="comments-link"><i class="fa fa-comment-o"></i><a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/#disqus_thread"><span class="dsq-postid" data-dsqidentifier="1474 https://lpplmarketwatch.com/?p=1474">Leave a comment</span></a></span>
 				
 				
 				</div><!-- .entry-meta -->
@@ -120,17 +124,18 @@ img.emoji {
 						<div class="entry-content">
 
 				<article class="post">
-<h1 class="title">Mean Value vs. Window &#8211; Plot</h1>
 <div class="entry-content">
-<p>There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 timeseries.</p>
-<p><a class="fancybox" title="Natural Log" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="Natural Log" /></a><span class="caption">Natural Log</span></p>
+<p>There are now 17,330 individual time series monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 time series.</p>
+<p><span class="caption">Natural Log</span></p>
+<p><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" /></p>
 <p>The curve of best fit displayed above is:</p>
 <p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
 <p>a = -9.746393</p>
 <p>b = 3.613444</p>
 <p>Taking this function and rearranging the terms produces:</p>
 <p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
-<p><a class="fancybox" title="Exponential" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="Exponential" /></a><span class="caption">Exponential</span></p>
+<p><span class="caption">Exponential</span></p>
+<p><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" /></p>
 <p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
 <p>The next step will be to calculate an empirical distribution for each window.</p>
 <p>Download the pdfs:</p>
@@ -152,6 +157,9 @@ img.emoji {
 	<div class="well">
 						<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
 											<li>
+					<a href="https://lpplmarketwatch.com/2018/02/03/bitcoin-phase-change-prediction-analysis/">Bitcoin Phase-Change Prediction Analysis</a>
+									</li>
+											<li>
 					<a href="https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/">Mean Value vs. Window &#8211; Plot</a>
 									</li>
 											<li>
@@ -162,9 +170,6 @@ img.emoji {
 									</li>
 											<li>
 					<a href="https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/">D3.js Multiple Line Plot &#8211; Part 5</a>
-									</li>
-											<li>
-					<a href="https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/">D3.js Multiple Line Plot &#8211; Part 4</a>
 									</li>
 					</ul>
 		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>

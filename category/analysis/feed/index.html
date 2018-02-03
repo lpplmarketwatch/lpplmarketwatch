@@ -12,7 +12,7 @@
 	<atom:link href="https://lpplmarketwatch.com/category/analysis/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost</link>
 	<description>Blog of The Bubble Index</description>
-	<lastBuildDate>Sat, 03 Feb 2018 17:28:08 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 03 Feb 2018 19:49:12 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -27,19 +27,20 @@
 		<category><![CDATA[LPPL]]></category>
 
 		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=1474</guid>
-		<description><![CDATA[Mean Value vs. Window &#8211; Plot There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated [&#8230;]]]></description>
+		<description><![CDATA[There are now 17,330 individual time series monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record [&#8230;]]]></description>
 				<content:encoded><![CDATA[<article class="post">
-<h1 class="title">Mean Value vs. Window &#8211; Plot</h1>
 <div class="entry-content">
-<p>There are now 17,330 individual timeseries monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 timeseries.</p>
-<p><a class="fancybox" title="Natural Log" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="Natural Log" /></a><span class="caption">Natural Log</span></p>
+<p>There are now 17,330 individual time series monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 time series.</p>
+<p><span class="caption">Natural Log</span></p>
+<p><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" /></p>
 <p>The curve of best fit displayed above is:</p>
 <p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
 <p>a = -9.746393</p>
 <p>b = 3.613444</p>
 <p>Taking this function and rearranging the terms produces:</p>
 <p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
-<p><a class="fancybox" title="Exponential" href="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" rel="gallery0"><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="Exponential" /></a><span class="caption">Exponential</span></p>
+<p><span class="caption">Exponential</span></p>
+<p><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" /></p>
 <p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
 <p>The next step will be to calculate an empirical distribution for each window.</p>
 <p>Download the pdfs:</p>
