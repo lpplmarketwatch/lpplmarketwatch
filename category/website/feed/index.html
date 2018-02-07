@@ -12,11 +12,11 @@
 	<atom:link href="https://lpplmarketwatch.com/category/website/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost</link>
 	<description>Blog of The Bubble Index</description>
-	<lastBuildDate>Sat, 03 Feb 2018 19:49:12 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Feb 2018 01:45:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.9.2</generator>
+	<generator>https://wordpress.org/?v=4.9.4</generator>
 	<item>
 		<title>Three.js 3D Contour Plot &#8211; Part 1</title>
 		<link>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/</link>
@@ -88,7 +88,7 @@ init();</code></pre>
 		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=690</guid>
 		<description><![CDATA[Working version of the plot, download here. This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
-<p>This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For instance, assume the &#8220;52 Days&#8221; and &#8220;104 Days&#8221; time-series are currently displayed and the y-range is: [0 &#8211; 123]. Now, the &#8220;2520 Days&#8221; time-series is added by a mouse click. This time series has y-values in the range [420 &#8211; 540]. Thus, the new range [0 &#8211; 540] needs to be established as the new y-axis. However, all the time-series displayed &#8220;pre-click&#8221; (52 and 104 Days) will need to be removed and re-drawn since their paths are scaled based on the [0 &#8211; 123] range of y-values. As seen in <a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-4/" target="_blank">part 4</a>, if the legend button is black with a strike-through, the <code>addWindow()</code> function is called:</p>
+<p>This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For instance, assume the &#8220;52 Days&#8221; and &#8220;104 Days&#8221; time-series are currently displayed and the y-range is: [0 &#8211; 123]. Now, the &#8220;2520 Days&#8221; time-series is added by a mouse click. This time series has y-values in the range [420 &#8211; 540]. Thus, the new range [0 &#8211; 540] needs to be established as the new y-axis. However, all the time-series displayed &#8220;pre-click&#8221; (52 and 104 Days) will need to be removed and re-drawn since their paths are scaled based on the [0 &#8211; 123] range of y-values. As seen in <a href="https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/" target="_blank" rel="noopener">part 4</a>, if the legend button is black with a strike-through, the <code>addWindow()</code> function is called:</p>
 <pre><code>function addWindow(name, addAllBoolean, updateBoolean, longTransition) {
     var transition = longTransition ? 500 : 0;
     if (svg.selectAll(".index").empty() || !svg.selectAll(".index").classed("a" + name) || updateBoolean) {
@@ -196,7 +196,7 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=678</guid>
 		<description><![CDATA[Working version of the plot, download here. The D3 function, d3.mouse(), provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The mousemove() function was initialized in part 1 as [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
-<p>The D3 function, <code>d3.mouse()</code>, provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The <code>mousemove()</code> function was initialized in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a> as follows:</p>
+<p>The D3 function, <code>d3.mouse()</code>, provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The <code>mousemove()</code> function was initialized in <a href="https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a> as follows:</p>
 <pre><code>function mousemove() {
     var x0 = x.invert(d3.mouse(d3.select("#svgMain").node())[0]);
     var i = bisectDate(origData, x0, 1);
@@ -212,7 +212,7 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
     });
 }
 </code></pre>
-<p>The code in <a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-4/" target="_blank">part 4</a> displayed where the mousemove() function is first called.</p>
+<p>The code in <a href="https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/" target="_blank" rel="noopener">part 4</a> displayed where the mousemove() function is first called.</p>
 <p>Next, add html and svg elements which draw circles and append text to the plot display at the location and value of the data points. These objects will follow the movement of the mouse. The location of the nearest Date will be fixed in the top center of the plot; its value will change accordingly as the mouse moves. Each time-series line currently displayed on the plot will need to have a &#8220;rect&#8221; appended to it, as shown below:</p>
 <pre><code>var addMouse = function() {
     focus = svg.selectAll(".index").append("g")
@@ -280,7 +280,7 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=661</guid>
 		<description><![CDATA[Working version of the plot, download here. This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
-<p>This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, the plot display must not fill the entire height of the svg object. As seen in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a>, the plot has a bottom margin of size 100 and a top margin of size 20. This allows space for a legend to span the area below the plot.</p>
+<p>This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, the plot display must not fill the entire height of the svg object. As seen in <a href="https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a>, the plot has a bottom margin of size 100 and a top margin of size 20. This allows space for a legend to span the area below the plot.</p>
 <pre><code>var maxPerRow = Math.ceil(indices.length / 2);
 var legendSpace = width / maxPerRow;</code></pre>
 <p>The code assumes that two rows will be enough to display all the time-series labels, including an &#8220;Add All&#8221; and &#8220;Remove All&#8221; button.</p>
@@ -409,7 +409,7 @@ var legendSpace = width / maxPerRow;</code></pre>
 		<description><![CDATA[Working version of the plot, download here. The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes. Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes.</p>
-<p>Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; However, note that the y-axis has been scaled (<a href="https://lpplmarketwatch.com/2015/07/d3-js-multiple-line-plot-part-2/" target="_blank">part 2</a>) based on all the time-series. If a single time-series is removed, the y-axis should be re-scaled and re-drawn. The entire plot will also have to be re-drawn. Removing and added lines will be the subject of later posts.</p>
+<p>Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; However, note that the y-axis has been scaled (<a href="https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/" target="_blank" rel="noopener">part 2</a>) based on all the time-series. If a single time-series is removed, the y-axis should be re-scaled and re-drawn. The entire plot will also have to be re-drawn. Removing and added lines will be the subject of later posts.</p>
 <pre><code>    svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
@@ -426,7 +426,7 @@ var legendSpace = width / maxPerRow;</code></pre>
         .text("Relative Power");
 </code></pre>
 <p>Now the initial lines can be drawn on the plot. Since the initial state of the <code>svg</code> selection contains no child elements having the &#8220;.index&#8221; keyword, the D3 selection: <code>svg.selectAll(".index")</code> will return with an empty selection. Thus, the combination of the <code>.data(indices)</code> and <code>.enter().append("g")</code> D3 functions will append a &#8220;g&#8221; element for every map key in the <code>index</code> object. Each &#8220;g&#8221; element will have an &#8220;id&#8221; and &#8220;class&#8221; based on the individual time-series &#8220;name&#8221; attribute.</p>
-<p>For each time-series object attached to the <code>index</code> selection, the <code>.append("path")</code> function will create a &#8220;path&#8221; element. This path will be drawn based on the <code>values</code> entry of the individual time-series map. The <code>function(d)</code> in the D3 callback of <code>.attr()</code> implicitly iterates over all key-pairs in the <code>index</code> selection and all key-pair in each time-series. The <code>line</code> and <code>color</code> functions were initialized in <a href="https://lpplmarketwatch.com/2015/07/d3-multiple-line-plot-part-1/" target="_blank">part 1</a>.</p>
+<p>For each time-series object attached to the <code>index</code> selection, the <code>.append("path")</code> function will create a &#8220;path&#8221; element. This path will be drawn based on the <code>values</code> entry of the individual time-series map. The <code>function(d)</code> in the D3 callback of <code>.attr()</code> implicitly iterates over all key-pairs in the <code>index</code> selection and all key-pair in each time-series. The <code>line</code> and <code>color</code> functions were initialized in <a href="https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a>.</p>
 <pre><code>    index = svg.selectAll(".index")
         .data(indices)
         .enter().append("g")

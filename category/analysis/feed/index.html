@@ -12,11 +12,11 @@
 	<atom:link href="https://lpplmarketwatch.com/category/analysis/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost</link>
 	<description>Blog of The Bubble Index</description>
-	<lastBuildDate>Sat, 03 Feb 2018 19:49:12 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Feb 2018 01:45:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.9.2</generator>
+	<generator>https://wordpress.org/?v=4.9.4</generator>
 	<item>
 		<title>Mean Value vs. Window &#8211; Plot</title>
 		<link>https://lpplmarketwatch.com/2018/02/03/mean-value-vs-window-plot/</link>
@@ -32,7 +32,8 @@
 <div class="entry-content">
 <p>There are now 17,330 individual time series monitored by The Bubble Index; each with a full range of windows. The windows range from 52 to 35,500 days. Below is plotted the natural log of the mean value (y-axis) versus the window (x-axis). Each window’s mean value represents the mean calculated over the entire historical record for all 17,330 time series.</p>
 <p><span class="caption">Natural Log</span></p>
-<p><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" alt="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/logsmall.png" /></p>
+<p><img class="alignnone  wp-image-1491" src="https://lpplmarketwatch.com/wp-content/uploads/2018/02/logsmall-300x237.png" alt="" width="557" height="440" srcset="https://lpplmarketwatch.com/wp-content/uploads/2018/02/logsmall-300x237.png 300w, https://lpplmarketwatch.com/wp-content/uploads/2018/02/logsmall.png 669w" sizes="(max-width: 557px) 100vw, 557px" /></p>
+<p>&nbsp;</p>
 <p>The curve of best fit displayed above is:</p>
 <p><code>ln(y) = a + b * ln(x)</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window.</p>
 <p>a = -9.746393</p>
@@ -40,7 +41,8 @@
 <p>Taking this function and rearranging the terms produces:</p>
 <p><code>y = exp(a) * x ^ b</code>, where y represents the mean value outputted by The Bubble Index software and x represents the window. (constants a and b are as above).</p>
 <p><span class="caption">Exponential</span></p>
-<p><img src="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" alt="http://127.0.0.1:8080/ipns/QmPC1xcsMTDKFTWHLrGEaNTCEdceUf4wWRJhM5P4kDeUsv/2016/06/expsmall.png" /></p>
+<p><img class="alignnone  wp-image-1492" src="https://lpplmarketwatch.com/wp-content/uploads/2018/02/expsmall-300x237.png" alt="" width="574" height="454" srcset="https://lpplmarketwatch.com/wp-content/uploads/2018/02/expsmall-300x237.png 300w, https://lpplmarketwatch.com/wp-content/uploads/2018/02/expsmall.png 669w" sizes="(max-width: 574px) 100vw, 574px" /></p>
+<p>&nbsp;</p>
 <p>To incorporate this information into the plots, the mean value for a given window will have Relative Power = 50.0 In other words, the output to the previous equation, which calculates the mean value for a given window, will be displayed on the website’s plots as 50.0</p>
 <p>The next step will be to calculate an empirical distribution for each window.</p>
 <p>Download the pdfs:</p>
