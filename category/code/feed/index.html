@@ -9,7 +9,7 @@
 
 <channel>
 	<title>code &#8211; LPPL Market Watch</title>
-	<atom:link href="https://lpplmarketwatch.com/category/code/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.lpplmarketwatch.com/category/code/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost</link>
 	<description>Blog of The Bubble Index</description>
 	<lastBuildDate>Wed, 07 Feb 2018 02:25:07 +0000</lastBuildDate>
@@ -19,17 +19,17 @@
 	<generator>https://wordpress.org/?v=4.9.4</generator>
 	<item>
 		<title>Three.js 3D Contour Plot &#8211; Part 1</title>
-		<link>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/#respond</comments>
 		<pubDate>Fri, 31 Jul 2015 01:38:37 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
 		<category><![CDATA[three.js]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=696</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=696</guid>
 		<description><![CDATA[Three.js is a powerful tool for visualizing a wide variety of objects including mathematical data. The JavaScript based API greatly simplifies the creation and manipulation of WebGL graphic objects. This post is the first in a series which describe the creation of The Bubble Index 3D Contours. The first step is to check if the [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>Three.js is a powerful tool for visualizing a wide variety of objects including mathematical data. The JavaScript based API greatly simplifies the creation and manipulation of WebGL graphic objects. This post is the first in a series which describe the creation of <a href="https://lpplmarketwatch.com/3d-contour-examples/" target="_blank">The Bubble Index 3D Contours</a>. The first step is to check if the user&#8217;s device supports WebGL. The <code>Detector</code> variable comes from <a href="http://alteredqualia.com/" target="_blank">AlteredQualia</a> and <a href="http://mrdoob.com/" target="_blank">Mr.Doob</a>. If the device supports WebGL, it is time to initialize variables:</p>
+				<content:encoded><![CDATA[<p>Three.js is a powerful tool for visualizing a wide variety of objects including mathematical data. The JavaScript based API greatly simplifies the creation and manipulation of WebGL graphic objects. This post is the first in a series which describe the creation of <a href="https://www.lpplmarketwatch.com/3d-contour-examples/" target="_blank">The Bubble Index 3D Contours</a>. The first step is to check if the user&#8217;s device supports WebGL. The <code>Detector</code> variable comes from <a href="http://alteredqualia.com/" target="_blank">AlteredQualia</a> and <a href="http://mrdoob.com/" target="_blank">Mr.Doob</a>. If the device supports WebGL, it is time to initialize variables:</p>
 <pre><code>if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 var renderer; 
 var texture; 
@@ -71,13 +71,13 @@ init();</code></pre>
     animate();
  }</code></pre>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/31/three-js-3d-contour-plot-part-1/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>D3.js Multiple Line Plot &#8211; Part 6</title>
-		<link>https://lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/#respond</comments>
 		<pubDate>Thu, 30 Jul 2015 02:32:54 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -85,10 +85,10 @@ init();</code></pre>
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=690</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=690</guid>
 		<description><![CDATA[Working version of the plot, download here. This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
-<p>This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For instance, assume the &#8220;52 Days&#8221; and &#8220;104 Days&#8221; time-series are currently displayed and the y-range is: [0 &#8211; 123]. Now, the &#8220;2520 Days&#8221; time-series is added by a mouse click. This time series has y-values in the range [420 &#8211; 540]. Thus, the new range [0 &#8211; 540] needs to be established as the new y-axis. However, all the time-series displayed &#8220;pre-click&#8221; (52 and 104 Days) will need to be removed and re-drawn since their paths are scaled based on the [0 &#8211; 123] range of y-values. As seen in <a href="https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/" target="_blank" rel="noopener">part 4</a>, if the legend button is black with a strike-through, the <code>addWindow()</code> function is called:</p>
+<p>This final post describes the code which needs to be executed after any time-series has been added or removed. When a time-series has been added or removed via the legend button, it is possible that its unique range of y-values is not currently displayed in the plot. For instance, assume the &#8220;52 Days&#8221; and &#8220;104 Days&#8221; time-series are currently displayed and the y-range is: [0 &#8211; 123]. Now, the &#8220;2520 Days&#8221; time-series is added by a mouse click. This time series has y-values in the range [420 &#8211; 540]. Thus, the new range [0 &#8211; 540] needs to be established as the new y-axis. However, all the time-series displayed &#8220;pre-click&#8221; (52 and 104 Days) will need to be removed and re-drawn since their paths are scaled based on the [0 &#8211; 123] range of y-values. As seen in <a href="https://www.lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/" target="_blank" rel="noopener">part 4</a>, if the legend button is black with a strike-through, the <code>addWindow()</code> function is called:</p>
 <pre><code>function addWindow(name, addAllBoolean, updateBoolean, longTransition) {
     var transition = longTransition ? 500 : 0;
     if (svg.selectAll(".index").empty() || !svg.selectAll(".index").classed("a" + name) || updateBoolean) {
@@ -179,13 +179,13 @@ init();</code></pre>
 <p>In each of these functions, the D3 transition function is called in order to make the addition and remove of the time-series lines smooth.<br />
 This concludes the posts concerning drawing multiple line plots with mouse interaction in D3.js. Hope this helps!</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/30/d3-js-multiple-line-plot-part-6/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>D3.js Multiple Line Plot &#8211; Part 5</title>
-		<link>https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/#respond</comments>
 		<pubDate>Wed, 29 Jul 2015 01:23:44 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -193,10 +193,10 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=678</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=678</guid>
 		<description><![CDATA[Working version of the plot, download here. The D3 function, d3.mouse(), provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The mousemove() function was initialized in part 1 as [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
-<p>The D3 function, <code>d3.mouse()</code>, provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The <code>mousemove()</code> function was initialized in <a href="https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a> as follows:</p>
+<p>The D3 function, <code>d3.mouse()</code>, provides a convenient tool for tracking the movement of the mouse as the user interacts with the plot. The nearest time x-value is determined and used to display the corresponding y-values for each time-series displayed. The <code>mousemove()</code> function was initialized in <a href="https://www.lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a> as follows:</p>
 <pre><code>function mousemove() {
     var x0 = x.invert(d3.mouse(d3.select("#svgMain").node())[0]);
     var i = bisectDate(origData, x0, 1);
@@ -212,7 +212,7 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
     });
 }
 </code></pre>
-<p>The code in <a href="https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/" target="_blank" rel="noopener">part 4</a> displayed where the mousemove() function is first called.</p>
+<p>The code in <a href="https://www.lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/" target="_blank" rel="noopener">part 4</a> displayed where the mousemove() function is first called.</p>
 <p>Next, add html and svg elements which draw circles and append text to the plot display at the location and value of the data points. These objects will follow the movement of the mouse. The location of the nearest Date will be fixed in the top center of the plot; its value will change accordingly as the mouse moves. Each time-series line currently displayed on the plot will need to have a &#8220;rect&#8221; appended to it, as shown below:</p>
 <pre><code>var addMouse = function() {
     focus = svg.selectAll(".index").append("g")
@@ -263,13 +263,13 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 }
 </code></pre>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/29/d3-js-multiple-line-plot-part-5/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>D3.js Multiple Line Plot &#8211; Part 4</title>
-		<link>https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/#respond</comments>
 		<pubDate>Tue, 28 Jul 2015 00:47:31 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -277,10 +277,10 @@ This concludes the posts concerning drawing multiple line plots with mouse inter
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=661</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=661</guid>
 		<description><![CDATA[Working version of the plot, download here. This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
-<p>This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, the plot display must not fill the entire height of the svg object. As seen in <a href="https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a>, the plot has a bottom margin of size 100 and a top margin of size 20. This allows space for a legend to span the area below the plot.</p>
+<p>This post discusses the code responsible for creating an interactive legend for a multiple line plot &#8212; as seen on the Plot page of The Bubble Index. The legend will be located below the plot. In order to create an area to contain room for the legend&#8217;s text, the plot display must not fill the entire height of the svg object. As seen in <a href="https://www.lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a>, the plot has a bottom margin of size 100 and a top margin of size 20. This allows space for a legend to span the area below the plot.</p>
 <pre><code>var maxPerRow = Math.ceil(indices.length / 2);
 var legendSpace = width / maxPerRow;</code></pre>
 <p>The code assumes that two rows will be enough to display all the time-series labels, including an &#8220;Add All&#8221; and &#8220;Remove All&#8221; button.</p>
@@ -391,13 +391,13 @@ var legendSpace = width / maxPerRow;</code></pre>
 });
 </code></pre>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/28/d3-js-multiple-line-plot-part-4/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>D3.js Multiple Line Plot &#8211; Part 3</title>
-		<link>https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/#respond</comments>
 		<pubDate>Fri, 24 Jul 2015 00:53:57 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -405,11 +405,11 @@ var legendSpace = width / maxPerRow;</code></pre>
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=650</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=650</guid>
 		<description><![CDATA[Working version of the plot, download here. The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes. Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>The data is now imported and loaded into memory. The next step is to attach each time-series to the DOM as an element. Before doing that, draw the initial axes.</p>
-<p>Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; However, note that the y-axis has been scaled (<a href="https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/" target="_blank" rel="noopener">part 2</a>) based on all the time-series. If a single time-series is removed, the y-axis should be re-scaled and re-drawn. The entire plot will also have to be re-drawn. Removing and added lines will be the subject of later posts.</p>
+<p>Drawing the initial axes are easy with D3. Nothing too crazy, the y-axis has the text: &#8220;Relative Power.&#8221; However, note that the y-axis has been scaled (<a href="https://www.lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/" target="_blank" rel="noopener">part 2</a>) based on all the time-series. If a single time-series is removed, the y-axis should be re-scaled and re-drawn. The entire plot will also have to be re-drawn. Removing and added lines will be the subject of later posts.</p>
 <pre><code>    svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
@@ -426,7 +426,7 @@ var legendSpace = width / maxPerRow;</code></pre>
         .text("Relative Power");
 </code></pre>
 <p>Now the initial lines can be drawn on the plot. Since the initial state of the <code>svg</code> selection contains no child elements having the &#8220;.index&#8221; keyword, the D3 selection: <code>svg.selectAll(".index")</code> will return with an empty selection. Thus, the combination of the <code>.data(indices)</code> and <code>.enter().append("g")</code> D3 functions will append a &#8220;g&#8221; element for every map key in the <code>index</code> object. Each &#8220;g&#8221; element will have an &#8220;id&#8221; and &#8220;class&#8221; based on the individual time-series &#8220;name&#8221; attribute.</p>
-<p>For each time-series object attached to the <code>index</code> selection, the <code>.append("path")</code> function will create a &#8220;path&#8221; element. This path will be drawn based on the <code>values</code> entry of the individual time-series map. The <code>function(d)</code> in the D3 callback of <code>.attr()</code> implicitly iterates over all key-pairs in the <code>index</code> selection and all key-pair in each time-series. The <code>line</code> and <code>color</code> functions were initialized in <a href="https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a>.</p>
+<p>For each time-series object attached to the <code>index</code> selection, the <code>.append("path")</code> function will create a &#8220;path&#8221; element. This path will be drawn based on the <code>values</code> entry of the individual time-series map. The <code>function(d)</code> in the D3 callback of <code>.attr()</code> implicitly iterates over all key-pairs in the <code>index</code> selection and all key-pair in each time-series. The <code>line</code> and <code>color</code> functions were initialized in <a href="https://www.lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/" target="_blank" rel="noopener">part 1</a>.</p>
 <pre><code>    index = svg.selectAll(".index")
         .data(indices)
         .enter().append("g")
@@ -447,13 +447,13 @@ var legendSpace = width / maxPerRow;</code></pre>
         });
 </code></pre>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/24/d3-js-multiple-line-plot-part-3/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>D3.js Multiple Line Plot &#8211; Part 2</title>
-		<link>https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/#respond</comments>
 		<pubDate>Wed, 22 Jul 2015 01:01:29 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -461,7 +461,7 @@ var legendSpace = width / maxPerRow;</code></pre>
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=640</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=640</guid>
 		<description><![CDATA[Working version of the plot, download here. As mentioned before, the following code is presented &#8220;as it is&#8221; in its current version. Some functions and variables are presented out of order. The SVG variable is created by a D3 selection. The &#8220;plotarea&#8221; &#60;div&#62; is selected as the element where the SVG plot will be created. [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
 <p>As mentioned before, the following code is presented &#8220;as it is&#8221; in its current version. Some functions and variables are presented out of order.</p>
@@ -523,13 +523,13 @@ var legendSpace = width / maxPerRow;</code></pre>
     ]);
 </code></pre>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/22/d3-js-multiple-line-plot-part-2/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>D3.js Multiple Line Plot &#8211; Part 1</title>
-		<link>https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/</link>
-		<comments>https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/</link>
+		<comments>https://www.lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/#respond</comments>
 		<pubDate>Tue, 21 Jul 2015 01:46:08 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -537,7 +537,7 @@ var legendSpace = width / maxPerRow;</code></pre>
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=627</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=627</guid>
 		<description><![CDATA[To help any one interested in creating &#8220;multi-line&#8221; or multiple line charts with D3.js, I will walk through the various steps required to create the D3 plots on The Bubble Index. There may be many places in my code which could be simplified and improved &#8212; I present the current version &#8220;as it is.&#8221; Working [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>To help any one interested in creating &#8220;multi-line&#8221; or multiple line charts with D3.js, I will walk through the various steps required to create the D3 plots on The Bubble Index. There may be many places in my code which could be simplified and improved &#8212; I present the current version &#8220;as it is.&#8221;</p>
 <p>Working version of the plot, download <a href="https://cdn.thebubbleindex.com/Docs/plot_working_07272015.zip">here</a>.</p>
@@ -598,13 +598,13 @@ var bisectDate = d3.bisector(function(d) {
 }).left;
 </code></pre>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2015/07/21/d3-multiple-line-plot-part-1/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>Source Code Release</title>
-		<link>https://lpplmarketwatch.com/2014/05/26/source-code-release/</link>
-		<comments>https://lpplmarketwatch.com/2014/05/26/source-code-release/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2014/05/26/source-code-release/</link>
+		<comments>https://www.lpplmarketwatch.com/2014/05/26/source-code-release/#respond</comments>
 		<pubDate>Mon, 26 May 2014 21:22:00 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
@@ -612,24 +612,24 @@ var bisectDate = d3.bisector(function(d) {
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=28</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=28</guid>
 		<description><![CDATA[The source code and a downloadable release can be found here: CodePlex: The Bubble Index.]]></description>
 				<content:encoded><![CDATA[<p>The source code and a downloadable release can be found here: <a href="//thebubbleindex.codeplex.com/" target="_blank">CodePlex: The Bubble Index</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2014/05/26/source-code-release/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2014/05/26/source-code-release/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>Potential New Site</title>
-		<link>https://lpplmarketwatch.com/2014/04/28/potential-new-site/</link>
-		<comments>https://lpplmarketwatch.com/2014/04/28/potential-new-site/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2014/04/28/potential-new-site/</link>
+		<comments>https://www.lpplmarketwatch.com/2014/04/28/potential-new-site/#respond</comments>
 		<pubDate>Mon, 28 Apr 2014 03:48:00 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
 		<category><![CDATA[programming]]></category>
 		<category><![CDATA[website]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=33</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=33</guid>
 		<description><![CDATA[In previous posts I have mentioned, with few details, a potential way to display the state of the trading network. Over the past few weeks I have been playing with the idea and progress is being made. The site, Particle Markets, will be the center of these new ideas to publicly and freely display the [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>In previous posts I have mentioned, with few details, a potential way to display the state of the trading network. Over the past few weeks I have been playing with the idea and progress is being made. The site, <a href="#" target="_blank">Particle Markets</a>, will be the center of these new ideas to publicly and freely display the state of trading networks.</p>
 <p>Currently the site displays a simple, 2D Ising type model, progressing through time. There are 176,400 total traders, and they all start with Long positions. As time progresses many of the traders sell and become either neutral or short. All traders are long/short 1 share. The summation of their numbers after each time step determines the change in price of the traded security.</p>
@@ -641,19 +641,19 @@ var bisectDate = d3.bisector(function(d) {
 <p>Future Update Ideas:</p>
 <div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="//lpplmarketwatch.com/wp-content/uploads/2014/04/particlemarketsedit.png"><img src="//lpplmarketwatch.com/wp-content/uploads/2014/04/particlemarketsedit.png" alt="" width="400" height="295" border="0" /></a></div>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2014/04/28/potential-new-site/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2014/04/28/potential-new-site/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
 		<title>The Bubble Index with Fake Data</title>
-		<link>https://lpplmarketwatch.com/2014/04/20/the-bubble-index-with-fake-data/</link>
-		<comments>https://lpplmarketwatch.com/2014/04/20/the-bubble-index-with-fake-data/#respond</comments>
+		<link>https://www.lpplmarketwatch.com/2014/04/20/the-bubble-index-with-fake-data/</link>
+		<comments>https://www.lpplmarketwatch.com/2014/04/20/the-bubble-index-with-fake-data/#respond</comments>
 		<pubDate>Sun, 20 Apr 2014 02:07:00 +0000</pubDate>
 		<dc:creator><![CDATA[lpplmarketwatch]]></dc:creator>
 				<category><![CDATA[code]]></category>
 		<category><![CDATA[programming]]></category>
 
-		<guid isPermaLink="false">https://lpplmarketwatch.com/?p=36</guid>
+		<guid isPermaLink="false">https://www.lpplmarketwatch.com/?p=36</guid>
 		<description><![CDATA[Here are two examples of random data ran with the algorithm of The Bubble Index. The first is a Geometric Brownian Motion and the second is a Weiner Process. It&#8217;s interesting to note the the shorter time frames (52, 104, and 153 days) never reach more than 20 and most of the time lie below [&#8230;]]]></description>
 				<content:encoded><![CDATA[<div style="-x-system-font: none; display: block; font-family: Helvetica,Arial,Sans-serif; font-size-adjust: none; font-size: 14px; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; margin: 12px auto 6px auto;">Here are two examples of random data ran with the algorithm of The Bubble Index. The first is a Geometric Brownian Motion and the second is a Weiner Process. It&#8217;s interesting to note the the shorter time frames (52, 104, and 153 days) never reach more than 20 and most of the time lie below 10. The longer time frames (256, 512, 1260, and 1764 days) can sometimes spike to large values. Comparing the output of the Geometric vs. non-Geometric Brownian motion, one can note the effect of exponential growth in the corresponding larger values of The Bubble Index. (Values are standardized)</div>
 <div style="-x-system-font: none; display: block; font-family: Helvetica,Arial,Sans-serif; font-size-adjust: none; font-size: 14px; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; margin: 12px auto 6px auto;"><a style="text-decoration: underline;" title="View The Bubble Index: Geometric Brownian Motion Fake Data on Scribd" href="//www.scribd.com/doc/219191392/The-Bubble-Index-Geometric-Brownian-Motion-Fake-Data">The Bubble Index: Geometric Brownian Motion Fake Data</a></div>
@@ -663,7 +663,7 @@ var bisectDate = d3.bisector(function(d) {
 <div style="-x-system-font: none; display: block; font-family: Helvetica,Arial,Sans-serif; font-size-adjust: none; font-size: 14px; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; margin: 12px auto 6px auto;"><a style="text-decoration: underline;" title="View The Bubble Index: Weiner Process on Scribd" href="//www.scribd.com/doc/219191496/The-Bubble-Index-Weiner-Process">The Bubble Index: Weiner Process</a></div>
 <p><iframe src="//www.scribd.com/embeds/219191496/content?start_page=1&amp;view_mode=scroll&amp;show_recommendations=true" width="100%" height="600" frameborder="0" scrolling="no" data-aspect-ratio="undefined" data-auto-height="false"></iframe></p>
 ]]></content:encoded>
-			<wfw:commentRss>https://lpplmarketwatch.com/2014/04/20/the-bubble-index-with-fake-data/feed/</wfw:commentRss>
+			<wfw:commentRss>https://www.lpplmarketwatch.com/2014/04/20/the-bubble-index-with-fake-data/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 	</channel>
